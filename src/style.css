@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: #222622;
+    font-family: "Inter", sans-serif;
+}
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 30px 10px 30px;
+}
+.botao{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+.lua{
+    width: 10px;
+    padding-right: -10px;
+}
+.navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.navegacao__botao{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase ;
+}
+.titulo{
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+.marcas{
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: inline;
+    padding:  4px 8px 8px 8px;
+    border-radius: 8px;
+}
+.logos{
+    width: 100%;
+    text-align: center;
+}
+.logos_conteudo{
+    width: 1200px;
+    border-radius: 10px;
+    padding: 0 8px 8px 8px;
+    background-color: #4A4E58;
+}
+.logos img{
+    border-radius: 18px;
+}
+.imagem__principal{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.imagem__principal__conteudo{
+    width: 1350px;
+    border-radius: 8px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 30px 0 30px 0;
+}
+.info_coluna{
+    display: flex;
+    flex-direction: column;
+}
+.info_img{
+    width: 300px;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 8px;
+}
+.info_texto{
+    width: 300px;
+}
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 2px white;
+    height: 70px;
+    align-items: center;
+    margin: 0 40px 0 40px;
+}
+.rodape_esc{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    
+}
+.rodape_botao{
+    text-decoration: none;
+    color: white;
+}
+.title{
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-size: 70px;
+    margin-left: 100px;
+    color: beige;
+    text-transform: uppercase;
+}
+.subtitle{
+    font-size: 20px;
+    margin-left: 130px;
+    margin-bottom: 30px;
+}
+.name_map{
+    text-align: center;
+}
+.map{
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+.map_content{
+    width: 1200px;
+    height: 600px;
+}
+.banner{
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 50px 0;
+}
+.banner__content{
+    border-radius: 10px;
+}
+.text_info{
+    padding: 100px;
+}
+.logo_agradecimento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_branca{
+    width: 300px;
+}

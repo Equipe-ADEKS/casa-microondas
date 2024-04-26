@@ -29,7 +29,7 @@ body{
     justify-content: center;
     gap: 25px;
 }
-.navegacao__botao{
+.navegacao_botao{
     text-decoration: none;
     color: white;
     font-size: 32px;
@@ -60,16 +60,13 @@ body{
 .logos img{
     border-radius: 18px;
 }
-.imagem__principal{
+.imagem_principal{
     width: 100%;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 20px;
 }
-.imagem__principal__conteudo{
-    width: 1350px;
-    border-radius: 8px;
-}
+
 .info{
     display: flex;
     justify-content: center;
@@ -136,7 +133,7 @@ body{
     text-align: center;
     margin: 40px 0 50px 0;
 }
-.banner__content{
+.banner_content{
     border-radius: 10px;
 }
 .text_info{

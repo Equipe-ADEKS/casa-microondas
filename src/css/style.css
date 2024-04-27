@@ -6,23 +6,50 @@
 }
 body{
     color: white;
-    background-color: #222622;
+    background-color: #22262c;
     font-family: "Inter", sans-serif;
+}
+.mensage{
+    background-color:#2d3138 ;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+}
+.cabecalho{
+    position: sticky;
+    top: -5px;
+    background-color: #22262c;
+    padding: 10px 30px 0 30px;
 }
 .inicio{
     display: flex;
     justify-content: space-between;
     margin: 15px 30px 10px 30px;
+    align-items: center;
+}
+.nome{
+    font-size: 28px;
 }
 .botao{
     display: flex;
     align-items: center;
     padding: 8px 10px;
     border-radius: 8px;
+    background-color: #22262c;
+    border: none;
+    color: white;
+    font-size: 18px;
 }
-.lua{
-    width: 10px;
-    padding-right: -10px;
+
+.utilidades{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+#icon{
+    font-size: 17px;
+    color: white;
 }
 .navegacao{
     display: flex;
@@ -32,7 +59,7 @@ body{
 .navegacao__botao{
     text-decoration: none;
     color: white;
-    font-size: 32px;
+    font-size: 16px;
     text-transform: uppercase ;
 }
 .titulo{
@@ -47,19 +74,8 @@ body{
     padding:  4px 8px 8px 8px;
     border-radius: 8px;
 }
-.logos{
-    width: 100%;
-    text-align: center;
-}
-.logos_conteudo{
-    width: 1200px;
-    border-radius: 10px;
-    padding: 0 8px 8px 8px;
-    background-color: #4A4E58;
-}
-.logos img{
-    border-radius: 18px;
-}
+
+
 .imagem__principal{
     width: 100%;
     text-align: center;
@@ -67,46 +83,180 @@ body{
     margin-bottom: 20px;
 }
 .imagem__principal__conteudo{
-    width: 1350px;
+    width: 1390px;
     border-radius: 8px;
+}
+.shop{
+    display: flex;
+    height: 520px;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.shop img{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.shop_text{
+    width: 300px;
+}
+.shop span{
+    color: aqua;
+    font-size: smaller;
+    text-transform: lowercase;
+}
+.shop button{
+    background-color: #22262c;
+    box-shadow: none;
+    border: 2px solid aqua;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+}
+.ret{
+    text-align: center;
 }
 .info{
     display: flex;
     justify-content: center;
-    gap: 100px;
-    margin: 30px 0 30px 0;
+    gap: 25px;
+    margin: 30px 20px 30px 20px;
 }
 .info_coluna{
     display: flex;
     flex-direction: column;
 }
 .info_img{
-    width: 300px;
+    width: 450px;
     object-fit: cover;
-    height: 300px;
+    height: 450px;
     border-radius: 8px;
 }
-.info_texto{
-    width: 300px;
-}
-.rodape{
+
+.autor{
+    width: 1400px;
+    margin: 0 auto;
+    background-color: #343842;
+    padding: 30px 90px;
     display: flex;
-    justify-content: space-between;
-    border-top: solid 2px white;
-    height: 70px;
+    gap: 30px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.autor_content{
+    font-size: 30px;
+}
+.bio{
+    display: flex;
     align-items: center;
-    margin: 0 40px 0 40px;
+    gap: 30px;
+    font-size: 16px;
 }
-.rodape_esc{
+.bio img{
+    border-radius: 50%;
+    width: 70px;
+}
+.bio_content{
+    display: flex;
+    flex-direction: column;
+}
+.gta{
+    width: 100%;
+    background-color: #343842;
+    height: 550px;
+    display: flex;
+    align-items: center;
+
+}
+.history{
+    display: flex;
+    margin: 0 auto;
+    width: 1400px;
+    gap: 50px;
+    justify-content: space-between;
+}
+.history_content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.history h3{
+    font-size: 30px;
+}
+.history_1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.history_1 img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius:  5px;
+}
+.history_2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.history_2 img{
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+footer{
+    width: 1400px;
+    margin: 0 auto;
+}
+.footer_social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.social_media{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.social_media a{
+    color: white;
+}
+.footer_content{
+    display: flex;
+    gap: 50px;
+    padding: 30px 0;
+}
+.footer_links{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.links_rapidos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links_rapidos a{
+    text-decoration: none;
+    color: white;
+}
+.footer_footer{
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    
+    border-top: solid 0.5px white;
+    padding: 15px 0;
+    margin-bottom: 10px;
 }
 .rodape_botao{
     text-decoration: none;
     color: white;
 }
+
 .title{
     font-family: "Alfa Slab One", serif;
     font-weight: 400;

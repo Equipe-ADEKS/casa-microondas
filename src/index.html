@@ -5,63 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem vindo a Casa do Microondas</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
+    <p class="mensage">Bem Vindo a Casa do Microondas</p>
+    <header class="cabecalho">
         <div class="inicio">
-            <h1><strong>Casa do Microondas</strong></h1>
-            <button class="botao"> <img class="lua" src="./img/lua.png" alt="">Dark</button>
+            <h1 class="nome"><strong>Casa do Microondas</strong></h1>
+            <nav class="navegacao">
+                <a class="navegacao__botao" href="index.html">home</a>
+                <a class="navegacao__botao" href="./html/localization.html">localização</a>
+                <a class="navegacao__botao" href="./html/informations.html">conserto em 30 minutos</a>   
+                <a class="navegacao__botao" href="">contato</a>
+            </nav>
+            <div class="utilidades">
+                <button class="botao"><i class="fa-regular fa-moon"></i>   Night</button>
+                <a  href=""><i id="icon" class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="../src/html/usuario.html"><i id="icon" class="fa-regular fa-user"></i></a>
+                <a href=""><i id="icon" class="fa-solid fa-cart-shopping"></i></a>
+            </div>
         </div>
-        <nav class="navegacao">
-            <a class="navegacao__botao" href="index.html">home</a>
-            <a class="navegacao__botao" href="./html/localization.html">localização</a>
-            <a class="navegacao__botao" href="./html/informations.html">conserto em 30 minutos</a>   
-            <a class="navegacao__botao" href="">contato</a>
-        </nav>
-    </header>
-    <main>
-        <div class="titulo"><h2 class="marcas">marcas parceiras</h2></div>
-        <div class="logos">
-            <img class="logos_conteudo" src="./img/logo-marcas.jpg" alt="">
-        </div>
+        
+        
+    </header> 
+    <main >
+        
         <div class="imagem__principal">
             <img class="imagem__principal__conteudo" src="./img/cabecalho.png" alt="">
         </div>
+        <section class="shop">
+            <div class="shop_content">
+                <img src="./img/shop/shop_cadeira.jpg" alt="">
+                <div class="shop_text">
+                    <span>Mais Vendidos</span>
+                    <h2>Cadeira de jantar formada</h2>
+                    <p>US $ 268</p>
+                    <div class="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                </div>
+            </div>
+            <div class="shop_content">
+                <img src="./img/shop/shop_ampulheta.jpg" alt="">
+                <div class="shop_text">
+                    <span>Mais Vendidos</span>
+                    <h2>Ampulheta de Areia Clarevelas</h2>
+                    <p>$ 18</p>
+                    <div class="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                </div>  
+            </div>
+            <div class="shop_content">
+                <img src="./img/shop/shop_lampada.jpg" alt="">
+                <div class="shop_text">
+                    <span>Mais Vendidos</span>
+                    <h2>Candeeiro pendente intemporal</h2>
+                    <p>$ 89</p>
+                    <div class="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                </div>    
+            </div>
+            <div class="shop_content">
+                <img src="./img/shop/shop_quadro.jpg" alt="">
+                <div class="shop_text">
+                    <span>Mais Vendidos</span>
+                    <h2>Arte de folhas emolduradas</h2>
+                    <p>US $ 36</p>
+                    <div class="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                </div>
+            </div>
+        </section>
         <section class="info">
             <div class="info_coluna">
                 <img class="info_img"  class="info_texto" src="./img/conserto-microondas.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quas consequatur cupiditate sapiente eveniet placeat animi quasi architecto nisi obcaecati. Provident vero molestias enim porro numquam voluptatum soluta expedita. Quasi?</p>
+                
             </div> 
             <div class="info_coluna">
                 <img class="info_img" src="./img/conserto-forno-eletrico.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, optio sunt distinctio illum fugit iure officiis repellat labore! Iste exercitationem voluptatem repudiandae temporibus ipsam repellendus saepe labore? Reiciendis, est optio.</p>
+                
             </div>
             <div class="info_coluna">
                 <img class="info_img" src="./img/refora-microondas.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae maxime, aut magnam commodi laudantium labore debitis dolor pariatur! Doloribus similique voluptates modi. Consequuntur corporis aliquam reprehenderit dolorum nemo repellendus adipisci.</p>
+                
             </div>
+        </section>
+        
+        <section >
+            <div class="autor">
+                <h3>Nosso mantra</h3>
+                <p class="autor_content">Não precisamos de mais coisas, precisamos de melhores escolhas. Na nossa busca contínua por produtos de qualidade valorizamos a sustentabilidade, materiais duráveis ​​e design bonito.</p>
+                <div class="bio">
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/04/profile.jpg" alt="">
+                    <div class="bio_content">
+                        <h3>Matt Wilkinson, founder of Heim</h3>
+                        <p>Read more About Us</p>
+                    </div>    
+                </div>
+            </div>    
         </section>
         <section class="info">
             <div class="info_coluna">
                 <img class="info_img" src="./img/acessorio.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae maxime, aut magnam commodi laudantium labore debitis dolor pariatur! Doloribus similique voluptates modi. Consequuntur corporis aliquam reprehenderit dolorum nemo repellendus adipisci.</p>
+                
             </div>
             <div class="info_coluna">
                 <img class="info_img" src="./img/venda-microondas.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae maxime, aut magnam commodi laudantium labore debitis dolor pariatur! Doloribus similique voluptates modi. Consequuntur corporis aliquam reprehenderit dolorum nemo repellendus adipisci.</p>
+                
             </div>
             <div class="info_coluna">
                 <img class="info_img" src="./img/busca-e-entrega.jpg" alt="">
-                <p class="info_texto" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae maxime, aut magnam commodi laudantium labore debitis dolor pariatur! Doloribus similique voluptates modi. Consequuntur corporis aliquam reprehenderit dolorum nemo repellendus adipisci.</p>
+                
+            </div>
+        </section>
+        <section class="gta">
+            <div class="history">
+                <div class="history_content">
+                    <h3>Nossa história</h3>
+                    <p>Nosso blog está cheio de inspiração e ideias criativas para o seu espaço residencial, dê uma olhada em nossos artigos mais recentes.</p>
+                </div>
+                <div class="history_1">
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/blog-minimalist-workspace.jpg" alt="">
+                    <h3>Ideias minimalistas para espaços de trabalho</h3>
+                    <p>Semiótica artesanal sustentável chillwave banh, narwhal prensado a frio hashtag cardigan swag tilde.</p>
+                </div>
+                <div class="history_2">
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/blog-monstera-plant.jpg" alt="">
+                    <h3>A planta Monstera</h3>
+                    <p>Brunch sálvia alta vida vegan ennui migas. Thundercats lula telhado festa tofu café flexitariano orgânico vegano.</p>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="rodape">
-        <div class="rodape_esc">
-            <a class="rodape_botao" href="">Sobre nós</a>
-            <a class="rodape_botao" href="">Contate-nos</a>
-        </div>
-        <p>© 2024 Casa do Microondas. Todos os direitos reservados.</p>
+    <footer>
+        <div class="footer_content">
+            <div class="footer_social">
+                <h1>Casa do Microondas</h1>
+                <p>Uma loja para quem quer comprar menos, mas melhor. Oferecemos uma coleção exclusiva de itens de alta qualidade para cada casa.</p>
+                <div class="social_media">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer_links">
+                <div class="links_rapidos">
+                    <p>links rápidos</p>
+                    <li><a href="">About</a></li>
+                    <li><a href="">My account</a></li>
+                    <li><a href="">My orders</a></li>
+                </div>
+                <div class="links_rapidos">
+                    <p>Customer Care</p>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">FAQs</a></li>
+                </div>
+            </div>
+        </div> 
+        <div class="footer_footer">            
+            <div class="rodape_esc">
+                <a class="rodape_botao" href="">Sobre nós</a>
+                <a class="rodape_botao" href="">Contate-nos</a>
+            </div>
+            <p>© 2024 Casa do Microondas. Todos os direitos reservados.</p>
+        </div>   
     </footer>
+
 </body>
 </html>

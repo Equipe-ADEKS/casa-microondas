@@ -211,6 +211,7 @@ body{
 footer{
     width: 1400px;
     margin: 0 auto;
+    border-top: solid 1px white;
 }
 .footer_social{
     display: flex;
@@ -300,4 +301,60 @@ footer{
 
 .logo_branca{
     width: 300px;
+}
+.formulario{
+    display: flex;
+    text-decoration: none;
+    width: 1300px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 20px;
+    border: none;
+    height: 100vh;
+    align-items: center;
+}
+.formulario input{
+    border: none;
+    background-color: #343842;
+    border-radius: 10px;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    
+}
+.conectar{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    padding: 30px;
+    border-right: solid 1px white;
+}
+.registrar{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    padding: 30px;
+}
+.formulario h3{
+    font-size: 30px;
+}
+.formulario button{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.formulario input:focus{
+    outline: none;
+}
+.minha_conta{
+    text-align: center;
+    position: relative;
+    top: 170px;
+    font-size: 40px ;
 }

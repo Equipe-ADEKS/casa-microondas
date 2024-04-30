@@ -4,64 +4,74 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    color: white;
-    background-color: #22262c;
-    font-family: "Inter", sans-serif;
-}
-.mensage{
-    background-color:#2d3138 ;
-    font-size: 16px;
-    text-align: center;
-    padding: 15px;
-}
-.cabecalho{
-    position: sticky;
-    top: -5px;
-    background-color: #22262c;
-    padding: 10px 30px 0 30px;
-}
-.inicio{
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 30px 10px 30px;
-    align-items: center;
-}
-.nome{
-    font-size: 28px;
-}
-.botao{
-    display: flex;
-    align-items: center;
-    padding: 8px 10px;
-    border-radius: 8px;
-    background-color: #22262c;
-    border: none;
-    color: white;
-    font-size: 18px;
+
+body {
+	color: white;
+	background-color: #22262c;
+	font-family: "Inter", sans-serif;
 }
 
-.utilidades{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 25px;
+.mensage {
+	background-color:#2d3138 ;
+	font-size: 16px;
+	text-align: center;
+	padding: 15px;
 }
-#icon{
-    font-size: 17px;
-    color: white;
+
+header {
+	position: sticky;
+	top: -5px;
+	background-color: #22262c;
+	padding: 10px 30px 0 30px;
 }
-.navegacao{
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+
+header .inicio {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 30px 10px 30px;
+	align-items: center;
 }
-.navegacao__botao{
+
+header .inicio .nome {
+	font-size: 28px;
+}
+
+header .inicio .navegacao {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+}
+
+header .inicio .navegacao .navegacao_botao {
     text-decoration: none;
     color: white;
     font-size: 16px;
     text-transform: uppercase ;
 }
+
+header .inicio .utilidades {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 25px;
+}
+
+header .inicio .utilidades button {
+	display: flex;
+	align-items: center;
+	padding: 8px 10px;
+	border-radius: 8px;
+	background-color: #22262c;
+	border: none;
+	color: white;
+	font-size: 18px;
+}
+
+#icon{
+    font-size: 17px;
+    color: white;
+}
+
 .titulo{
     text-align: center;
     margin: 20px 0 20px 0;
@@ -75,187 +85,63 @@ body{
     border-radius: 8px;
 }
 
-
-.imagem__principal{
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-.imagem__principal__conteudo{
-    width: 1390px;
-    border-radius: 8px;
-}
-.shop{
-    display: flex;
-    height: 520px;
-    justify-content: center;
-    gap: 30px;
-    
-}
-.shop img{
-    width: 325px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.shop_text{
-    width: 300px;
-}
-.shop span{
-    color: aqua;
-    font-size: smaller;
-    text-transform: lowercase;
-}
-.shop button{
-    background-color: #22262c;
-    box-shadow: none;
-    border: 2px solid aqua;
-    padding: 12px;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-
-}
-.ret{
-    text-align: center;
-}
-.info{
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 30px 20px 30px 20px;
-}
-.info_coluna{
-    display: flex;
-    flex-direction: column;
-}
-.info_img{
-    width: 450px;
-    object-fit: cover;
-    height: 450px;
-    border-radius: 8px;
+footer {
+	width: 1400px;
+	margin: 0 auto;
+	border-top: solid 1px white;
 }
 
-.autor{
-    width: 1400px;
-    margin: 0 auto;
-    background-color: #343842;
-    padding: 30px 90px;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    border-radius: 5px;
+footer .footer_content {
+	display: flex;
+	gap: 50px;
+	padding: 30px 0;
 }
-.autor_content{
-    font-size: 30px;
-}
-.bio{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 16px;
-}
-.bio img{
-    border-radius: 50%;
-    width: 70px;
-}
-.bio_content{
-    display: flex;
-    flex-direction: column;
-}
-.gta{
-    width: 100%;
-    background-color: #343842;
-    height: 550px;
-    display: flex;
-    align-items: center;
 
+footer .footer_content .footer_social {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
-.history{
-    display: flex;
-    margin: 0 auto;
-    width: 1400px;
-    gap: 50px;
-    justify-content: space-between;
+
+footer .footer_content .footer_social .social_media {
+	display: flex;
+	gap: 20px;
+	font-size: 30px;
+	text-align: center;
 }
-.history_content{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+
+footer .footer_content .footer_social .social_media a {
+	color: white;
 }
-.history h3{
-    font-size: 30px;
+
+footer .footer_content .footer_links {
+	display: flex;
+	gap: 40px;
+	list-style: none;
 }
-.history_1{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+footer .footer_content .footer_links .links_rapidos {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
-.history_1 img{
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    border-radius:  5px;
+
+footer .footer_content .footer_links .links_rapidos a {
+	text-decoration: none;
+	color: white;
 }
-.history_2{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+footer .footer_footer {
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 0.5px white;
+	padding: 15px 0;
+	margin-bottom: 10px;
 }
-.history_2 img{
-    width: 400px;
-    height: 200px;
-    border-radius: 5px;
-}
-footer{
-    width: 1400px;
-    margin: 0 auto;
-    border-top: solid 1px white;
-}
-.footer_social{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.social_media{
-    display: flex;
-    gap: 20px;
-    font-size: 30px;
-    text-align: center;
-}
-.social_media a{
-    color: white;
-}
-.footer_content{
-    display: flex;
-    gap: 50px;
-    padding: 30px 0;
-}
-.footer_links{
-    display: flex;
-    gap: 40px;
-    list-style: none;
-}
-.links_rapidos{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.links_rapidos a{
-    text-decoration: none;
-    color: white;
-}
-.footer_footer{
-    display: flex;
-    justify-content: space-between;
-    border-top: solid 0.5px white;
-    padding: 15px 0;
-    margin-bottom: 10px;
-}
-.rodape_botao{
-    text-decoration: none;
-    color: white;
+
+footer .footer_footer .rodape_esc .rodape_botao {
+	text-decoration: none;
+	color: white;
 }
 
 .title{
@@ -287,7 +173,7 @@ footer{
     text-align: center;
     margin: 40px 0 50px 0;
 }
-.banner__content{
+.banner_content{
     border-radius: 10px;
 }
 .text_info{

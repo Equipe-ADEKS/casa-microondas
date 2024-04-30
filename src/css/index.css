@@ -1,4 +1,152 @@
-main .imagem_principal {
+.imagem_principal {
 	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 20px;    
+}
+
+.imagem_principal .imagem_principal_conteudo {
+	width: 1390px;
+	border-radius: 8px;    
+}
+
+.shop {
+	display: flex;
+	height: 520px;
+	justify-content: center;
+	gap: 30px; 
+}
+
+.shop .shop_content img {
+	width: 325px;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.shop .shop_content .shop_text {
+	width: 300px;
+}
+
+.shop .shop_content .shop_text span {
+	color: aqua;
+	font-size: smaller;
+	text-transform: lowercase;
+}
+
+.shop .shop_content .shop_text button {
+	background-color: #22262c;
+	box-shadow: none;
+	border: 2px solid aqua;
+	padding: 12px;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.shop .shop_content .shop_text .ret {
+	text-align: center;
+}
+
+.info{
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+	margin: 30px 20px 30px 20px;
+	padding-top: 10px;
+}
+
+.info .info_coluna {
+	display: flex;
+	flex-direction: column;
+}
+
+.info .info_coluna .info_img {
+	width: 450px;
+	object-fit: cover;
+	height: 450px;
 	border-radius: 8px;
+}
+
+.author_section .author {
+	width: 1400px;
+	margin: 0 auto;
+	background-color: #343842;
+	padding: 30px 90px;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	border-radius: 5px;
+}
+
+.author_section .author .author_content {
+	font-size: 30px;
+}
+
+.author_section .author .bio {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	font-size: 16px;
+}
+
+.author_section .author .bio img {
+	border-radius: 50%;
+	width: 70px;
+}
+
+.author_section .author .bio_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.gta {
+	width: 100%;
+	background-color: #343842;
+	height: 550px;
+	display: flex;
+	align-items: center;      
+}
+
+.gta .history {
+	display: flex;
+	margin: 0 auto;
+	width: 1400px;
+	gap: 50px;
+	justify-content: space-between;
+}
+
+.gta .history_content {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.gta .history h3 {
+	font-size: 30px;
+}
+
+.gta .history .history_1 {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.gta .history .history_1 img{
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	border-radius:  5px;   
+}
+
+.gta .history .history_2 {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.gta .history .history_2 img {
+	width: 400px;
+	height: 200px;
+	border-radius: 5px;
 }

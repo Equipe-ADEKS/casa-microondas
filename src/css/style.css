@@ -23,6 +23,34 @@ header {
 	top: -5px;
 	background-color: #22262c;
 	padding: 10px 30px 0 30px;
+	width: 100%;
+}
+
+header a {
+	position: relative;
+	color: #fff;
+	text-decoration: none; 
+}
+
+header a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	transition: all 0.1s ease-in-out 0s;
+}
+
+header a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 header .inicio {
@@ -86,9 +114,36 @@ header .inicio .utilidades button {
 }
 
 footer {
-	width: 1400px;
+	width: 100%;
 	margin: 0 auto;
 	border-top: solid 1px white;
+}
+
+footer a {
+	position: relative;
+	color: #fff;
+	text-decoration: none; 
+}
+
+footer a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	transition: all 0.1s ease-in-out 0s;
+}
+
+footer a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 footer .footer_content {
@@ -101,6 +156,7 @@ footer .footer_content .footer_social {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	padding-left: 15px;
 }
 
 footer .footer_content .footer_social .social_media {
@@ -118,6 +174,7 @@ footer .footer_content .footer_links {
 	display: flex;
 	gap: 40px;
 	list-style: none;
+	padding-right: 15px;
 }
 
 footer .footer_content .footer_links .links_rapidos {
@@ -135,7 +192,7 @@ footer .footer_footer {
 	display: flex;
 	justify-content: space-between;
 	border-top: solid 0.5px white;
-	padding: 15px 0;
+	padding: 15px;
 	margin-bottom: 10px;
 }
 
@@ -188,59 +245,4 @@ footer .footer_footer .rodape_esc .rodape_botao {
 .logo_branca{
     width: 300px;
 }
-.formulario{
-    display: flex;
-    text-decoration: none;
-    width: 1300px;
-    margin: 0 auto;
-    justify-content: space-between;
-    gap: 20px;
-    border: none;
-    height: 100vh;
-    align-items: center;
-}
-.formulario input{
-    border: none;
-    background-color: #343842;
-    border-radius: 10px;
-    width: 500px;
-    height: 30px;
-    font-size: 20px;
-    color: white;
-    
-}
-.conectar{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 10px;
-    padding: 30px;
-    border-right: solid 1px white;
-}
-.registrar{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 10px;
-    padding: 30px;
-}
-.formulario h3{
-    font-size: 30px;
-}
-.formulario button{
-    width: 150px;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-}
-.formulario input:focus{
-    outline: none;
-}
-.minha_conta{
-    text-align: center;
-    position: relative;
-    top: 170px;
-    font-size: 40px ;
-}
+

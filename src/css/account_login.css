@@ -1,0 +1,64 @@
+.minha_conta {
+	text-align: center;
+	vertical-align: center;
+	position: relative;
+	top: 170px;
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+.formulario {
+	display: flex;
+	text-decoration: none;
+	width: 1300px;
+	margin: 0 auto;
+	justify-content: space-between;
+	gap: 20px;
+	border: none;
+	height: 100vh;
+	align-items: center;
+}
+
+.footer h3 {
+	font-size: 30px;
+}
+
+.formulario input {
+	border: none;
+	background-color: #343842;
+	border-radius: 10px;
+	width: 500px;
+	height: 30px;
+	font-size: 20px;
+	color: white;
+}
+
+.formulario input:focus {
+	outline: none;
+}
+
+.formulario button {
+	width: 150px;
+	font-size: 20px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+}
+
+.formulario .conectar {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 10px;
+	padding: 30px;
+	border-right: solid 1px white;    
+}
+
+.formulario .registrar {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 10px;
+	padding: 30px;
+}

@@ -1,106 +1,73 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
-.titulo {
-    color: white;
-    margin-left: 10px; 
+h2 {
+        text-align: center;
+        vertical-align: center;
+        top: 50px;
+        font-size: 40px;
+	padding-top: 40px;
+	padding-left: 20px;
+        padding-bottom: 5px;
 }
 
-body {
-    background-color: #222622;
-    font-family: Arial, Helvetica, sans-serif;
+h3 {
+	text-align: center;
+        top: 50px;    
+        font-size: 20px;
+	padding-top: 5px;
+        padding-left: 20px;    
 }
 
-header {
-    display: flex;
-    align-items: center;
+.formulario {
+        display: flex;
+        text-decoration: none;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+	vertical-align: center;
+	gap: 20px;
+        border: none;    
+        height: 150vh;    
+}    
+
+.formulario p {
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-.tipo {
-    background-color: #222622;
-    color: white;
-    font-size: 23px;  
-    align-items: flex-end;
-    cursor: pointer;
-    text-align: right;
-    margin-left: auto;
-    margin-right: 30px;
+.formulario input {    
+        border: solid;
+	border-width: 1px;
+        background-color: #343842;    
+        border-radius: 10px;
+	border-color: #FFFFFF;
+        width: 35%;    
+        height: 30px;    
+        font-size: 20px;    
+        color: white;    
+}    
+    
+.formulario input:focus {    
+        outline: none;    
+}    
+
+.formulario .message {
+	width: 100%;
+	height: 300px;
 }
 
-.tipo img {
-    height: 25px;
-    width: 30px;
-    margin-right: 0px;
+.formulario button {    
+        width: 150px;    
+        font-size: 20px;    
+        padding: 10px 20px;    
+        border-radius: 20px;    
+        border: none;    
+        cursor: pointer;    
 }
 
-a {
-    position: relative;
-    color: #fff;
-    text-decoration: none; 
-}
-
-a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.1s ease-in-out 0s;
-    transition: all 0.1s ease-in-out 0s;
-}
-
-a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);  
-}
-
-.opcoes {
-    color: white;
-    display: flex;
-    justify-content: center;
-}
-
-.link {
-    padding: 0 1em;
-}
-
-.micro {
-    text-align: center;
-}
-
-.micro img{
-    width: 1500px;
-}
-
-.cont {
-    text-align: left;
-    font-family: "Alfa Slab One", serif;
-    font-weight: 300;
-    font-size: 70px;
-    -webkit-text-stroke: 2px black; /* Contorno em torno do texto */
-    color: blanchedalmond;
-    margin-left: 40px;
-    margin-bottom: 0px;
-}
-
-.duvida{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 50;
-    font-size: 25px;
-    margin-left: 150px;
-    -webkit-text-stroke: 1.3px white;
-    color:black;                                                                                                                                                                          margin-bottom: 100px;                                                                        
-}
-
-.top{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    margin-left: 100px;
-    margin-top: 30px; 
+.formulario .conectar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 30px;
 }

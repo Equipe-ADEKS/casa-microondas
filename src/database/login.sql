@@ -82,22 +82,22 @@ CREATE TABLE Senha (
 );
 
 ALTER TABLE Pessoa ADD CONSTRAINT fk_pessoa_filial
-FOREING KEY (id_filial) REFERENCES Filial(id_filial);
+FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
 ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_filial
-FOREING KEY (id_filial) REFERENCES Filial(id_filial);
+FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
 ALTER TABLE Telefone ADD CONSTRAINT fk_telefone_pessoa
-FOREING KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Email ADD CONSTRAINT fk_email_pessoa
-FOREING KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Endereco ADD CONSTRAINT fk_endereco_pessoa
-FOREING KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Fornecedor ADD CONSTRAINT fk_fornecedor_pessoa
-FOREING KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Cliente ADD CONSTRAINT fk_cliente_pessoa
-FOREING KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);

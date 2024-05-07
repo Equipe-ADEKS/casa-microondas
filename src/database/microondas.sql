@@ -1,7 +1,4 @@
-DROP DATABASE CASA_MICROONDAS;
-CREATE DABASE CASA_MICROONDAS;
-
-USE CASA_MICROONDAS;
+USE CASA_MICROONDAS_LOGIN;
 
 CREATE TABLE Os (
 	id_o_s INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -28,7 +25,7 @@ CREATE TABLE Status (
 
 CREATE TABLE Acessorio (
 	id_acessorio INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	desc_acessorio VARCHAR(100),
+	desc_acessorio VARCHAR(100)
 );
 
 CREATE TABLE Categoria (
@@ -39,12 +36,12 @@ CREATE TABLE Categoria (
 CREATE TABLE Microondas (
 	id_microondas INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	tamanho VARCHAR(100) NOT NULL,
-	voltagem BOOLEAN(3),
+	voltagem BOOLEAN,
 	observacao VARCHAR(200) NOT NULL,
 	dia_recebimento DATE NOT NULL,
-	frete BOOLEAN(3) NOT NULL,
+	frete BOOLEAN NOT NULL,
 	id_modelo INTEGER NOT NULL,
-	id_status BOOLEAN
+	id_status INTEGER NOT NULL
 );
 
 CREATE TABLE Modelo (
@@ -78,12 +75,12 @@ CREATE TABLE Produto (
 	data_cadastro DATE,
 	quant_min FLOAT,
 	quant_estoque FLOAT,
-	acessorio,
-	ft_balcao,
+	/* acessorio, */
+	/* ft_balcao, */
 	codigo FLOAT,
 	unidade BOOLEAN,
 	id_filial INTEGER,
-	id_status BOOLEAN
+	id_status INTEGER NOT NULL
 );
 
 CREATE TABLE Itens_Vendidos (
@@ -126,7 +123,7 @@ ALTER TABLE Os ADD CONSTRAINT fk_os_acessorio
 FOREIGN KEY (id_acessorio) REFERENCES Acessorio(id_acessorio);
 
 ALTER TABLE Os ADD CONSTRAINT fk_os_funcionario
-FOREIGN KEY (id_funcionario) REFERENCES Funcionarioid_funcionario);
+FOREIGN KEY (id_funcionario) REFERENCES Funcionario(id_funcionario);
 
 ALTER TABLE Os ADD CONSTRAINT fk_os_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
@@ -152,11 +149,11 @@ FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 ALTER TABLE Produto ADD CONSTRAINT fk_produto_status
 FOREIGN KEY (id_status) REFERENCES Status(id_status);
 
-ALTER TABLE Itens_Vendidos ADD CONSTRAINT fk_itens-vendidos_produto
+ALTER TABLE Itens_Vendidos ADD CONSTRAINT fk_itensvendidos_produto
 FOREIGN KEY (id_produto) REFERENCES Produto(id_produto);
 
-ALTER TABLE Itens_Vendidos ADD CONSTRAINT fk_itens-vendidos_venda
+ALTER TABLE Itens_Vendidos ADD CONSTRAINT fk_itensvendidos_venda
 FOREIGN KEY (id_venda) REFERENCES Venda(id_venda);
 
-ALTER TABLE Os_Servico ADD CONSTRAINT fk_os-servico_os
+ALTER TABLE Os_Servico ADD CONSTRAINT fk_osservico_os
 FOREIGN KEY (id_o_s) REFERENCES Os(id_o_s);

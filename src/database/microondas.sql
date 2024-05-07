@@ -95,7 +95,14 @@ CREATE TABLE Os_Servico (
 	desc_os_servico VARCHAR(200),
 	valor_unit FLOAT,
 	quant INTEGER,
-	id_o_s INTEGER NOT NULL
+	id_o_s INTEGER NOT NULL,
+    id_servico INTEGER NOT NULL
+);
+
+CREATE TABLE Servico (
+	id_servico INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    desc_servico VARCHAR(200) NOT NULL,
+    valor FLOAT
 );
 
 CREATE TABLE Plano_Pagamento (
@@ -157,3 +164,6 @@ FOREIGN KEY (id_venda) REFERENCES Venda(id_venda);
 
 ALTER TABLE Os_Servico ADD CONSTRAINT fk_osservico_os
 FOREIGN KEY (id_o_s) REFERENCES Os(id_o_s);
+
+ALTER TABLE Os_Servico ADD CONSTRAINT fk_osservico_servico
+FOREIGN KEY (id_servico) REFERENCES Servico(id_servico);

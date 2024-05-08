@@ -139,7 +139,7 @@ header .inicio .utilidades button {
 }
 
 .menu_lateral{
-	width: 00px;
+	width: 0px;
 	min-height: 100vh;
 	position: fixed;
 	top: 0;

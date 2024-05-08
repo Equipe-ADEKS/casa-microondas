@@ -2,34 +2,34 @@
 	text-align: center;
 	vertical-align: center;
 	position: relative;
-	top: 170px;
-	font-size: 40px;
-	padding-bottom: 20px;
+	top: 10.625rem;
+	font-size: 2.5rem;
+	padding-bottom: 1.25rem;
 }
 
 .formulario {
 	display: flex;
 	text-decoration: none;
-	width: 1300px;
+	width: 81.25rem;
 	margin: 0 auto;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 1.25rem;
 	border: none;
 	height: 100vh;
 	align-items: center;
 }
 
 .formulario h3 {
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 
 .formulario input {
 	border: none;
 	background-color: #343842;
-	border-radius: 10px;
-	width: 500px;
-	height: 30px;
-	font-size: 20px;
+	border-radius: 0.625rem;
+	width: 31.25rem;
+	height: 1.875rem;
+	font-size: 1.25rem;
 	color: white;
 }
 
@@ -38,10 +38,10 @@
 }
 
 .formulario button {
-	width: 150px;
-	font-size: 20px;
-	padding: 10px 20px;
-	border-radius: 20px;
+	width: 9.375rem;
+	font-size: 1.25rem;
+	padding: 0.625rem 1.25rem;
+	border-radius: 1.25rem;
 	border: none;
 	cursor: pointer;
 }
@@ -50,8 +50,8 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	gap: 10px;
-	padding: 30px;
+	gap: 0.625rem;
+	padding: 1.875rem;
 	border-right: solid 1px white;    
 }
 
@@ -59,6 +59,6 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	gap: 10px;
-	padding: 30px;
+	gap: 0.625rem;
+	padding: 1.875rem;
 }

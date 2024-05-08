@@ -8,11 +8,14 @@
 	<link rel="stylesheet" href="./css/index.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-	<p class="mensage">Bem Vindo a Casa do Microondas</p>
+<body id="corpo">
+    <p class="mensage">Bem Vindo a Casa do Microondas</p>
 	<header>
 		<div class="inicio">
-			<h1 class="nome"><strong>Casa do Microondas</strong></h1>
+			<div class="inicio_barra">
+                <i class="fa-solid fa-bars"></i>
+                <h1 class="nome"><strong>Casa do Microondas</strong></h1>
+            </div>
 			<nav class="navegacao">
 				<a class="navegacao_botao" href="./index.html">home</a>
 				<a class="navegacao_botao" href="./html/localization.html">localização</a>
@@ -20,7 +23,7 @@
 				<a class="navegacao_botao" href="./html/contact.html">contato</a>
 			</nav>
 			<div class="utilidades">
-				<button class="botao"><i class="fa-regular fa-moon"></i>   Night</button>
+				<button class="botao"><i id="icon_moon" class="fa-regular fa-moon"></i>Night</button>
 				<a href=""><i id="icon" class="fa-solid fa-magnifying-glass"></i></a>
 				<a href="./html/account_login.html"><i id="icon" class="fa-regular fa-user"></i></a>
 				<a href=""><i id="icon" class="fa-solid fa-cart-shopping"></i></a>
@@ -28,6 +31,48 @@
 		</div>
 	</header>
 	<main>
+        <div class="menu_lateral">
+            <div class="menu_lateral_back">
+                <button><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="menu_lateral_content">
+                <div>
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/category-accessories-400x400.jpg" alt="">
+                    <a href="">Acessórios</a>
+                </div>
+                <div>
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/category-decoration-400x400.jpg" alt="">
+                    <a href="">Decoração</a>
+                </div>
+                <div>
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/category-essentials-400x400.jpg" alt="">
+                    <a href="">Essenciais</a>
+                </div>
+                <div>
+                    <img src="https://heim.nordicmade.com/wp-content/uploads/2023/03/category-living-400x400.jpg" alt="">
+                    <a href="">Vivendo</a>
+                </div>
+            </div>
+            <div class="menu_lateral_functions">
+                <a href="">Sobre</a>
+                <a href="">Contate-nos</a>
+                <a href="">Perguntas frequentes</a>
+                <a href="">Acompanhamento de serviços</a>
+            </div>
+            <div class="menu_lateral_other">
+                <a href="">Minha conta</a>
+                <button class="botao"><i id="icon_moon" class="fa-regular fa-moon"></i>Night</button>
+            </div>
+            <div class="menu_carrinho">
+                <div class="principal">
+                    <i class="fa-solid fa-box"></i>
+                    <p>Seu carrinho está vazio no momento!</p>
+                </div>
+                <div>
+                    <button>Comece a comprar</button>
+                </div>
+            </div>
+        </div>
 		<div class="imagem_principal">
 			<img class="imagem_principal_conteudo" src="./img/cabecalho.png" alt="">
 		</div>
@@ -154,5 +199,6 @@
 			<p>© 2024 Casa do Microondas. Todos os direitos reservados.</p>
 		</div>
 	</footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

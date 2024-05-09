@@ -57,7 +57,6 @@ CREATE TABLE Funcionario (
 	data_demi DATE,
 	id_departamento INTEGER,
 	funcao VARCHAR(200),
-	id_senha INTEGER NOT NULL,
 	id_filial INTEGER NOT NULL
 );
 
@@ -75,10 +74,12 @@ CREATE TABLE Cliente (
 	id_pessoa INTEGER NOT NULL
 );
 
-CREATE TABLE Senha (
-	id_senha INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	id_status BOOLEAN,
-	desc_senha VARCHAR(10)
+CREATE TABLE Usuario (
+	id_usuario INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	tipo_usuario VARCHAR(100),
+	desc_senha VARCHAR(10),
+    id_cliente INTEGER NOT NULL,
+    id_funcionario INTEGER NOT NULL
 );
 
 ALTER TABLE Pessoa ADD CONSTRAINT fk_pessoa_filial

@@ -4,8 +4,8 @@ CREATE TABLE Os (
 	id_o_s INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	data_abertura DATE,
 	descricao_problema VARCHAR(200),
-	acessorio VARCHAR(200),
-	garantia VARCHAR(100),
+    id_acessorio INTEGER NOT NULL,
+    garantia VARCHAR(100),
 	valor_mo FLOAT,
 	valor_desconto FLOAT,
 	valor_produto FLOAT,
@@ -17,10 +17,16 @@ CREATE TABLE Os (
 	id_produto INTEGER NOT NULL
 );
 
-CREATE TABLE Status (
+CREATE TABLE TabStatus (
 	id_status INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desc_status VARCHAR(100),
 	tipo_status VARCHAR(100)
+);
+
+CREATE TABLE Acessorio_OS (
+	id_acessorio_os INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_acessorio INTEGER NOT NULL,
+    id_o_s INTEGER NOT NULL
 );
 
 CREATE TABLE Acessorio (
@@ -33,22 +39,19 @@ CREATE TABLE Categoria (
 	desc_categoria VARCHAR(100)
 );
 
-CREATE TABLE Microondas (
-	id_microondas INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Equipamento (
+	id_equipamento INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	tamanho VARCHAR(100) NOT NULL,
 	voltagem BOOLEAN,
 	observacao VARCHAR(200) NOT NULL,
-	dia_recebimento DATE NOT NULL,
-	frete BOOLEAN NOT NULL,
 	id_modelo INTEGER NOT NULL,
-	id_status INTEGER NOT NULL
+	id_cor INTEGER NOT NULL
 );
 
 CREATE TABLE Modelo (
 	id_modelo INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desc_modelo VARCHAR(100),
-	id_marca INTEGER NOT NULL,
-	id_cor INTEGER NOT NULL
+	id_marca INTEGER NOT NULL
 );
 
 CREATE TABLE Marca (
@@ -75,8 +78,8 @@ CREATE TABLE Produto (
 	data_cadastro DATE,
 	quant_min FLOAT,
 	quant_estoque FLOAT,
-	/* acessorio, */
-	/* ft_balcao, */
+	acessorio BOOLEAN,
+	ft_balcao BOOLEAN,
 	codigo FLOAT,
 	unidade BOOLEAN,
 	id_filial INTEGER,
@@ -117,6 +120,12 @@ CREATE TABLE Forma_Pagamento (
 	desc_forma_pagto VARCHAR(100)
 );
 
+CREATE TABLE Faturamento (
+	id_faturamento INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id_venda INTEGER NOT NULL,
+    id_forma_pagto INTEGER NOT NULL
+);
+
 CREATE TABLE Venda (
 	id_venda INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desconto FLOAT,
@@ -135,11 +144,11 @@ FOREIGN KEY (id_funcionario) REFERENCES Funcionario(id_funcionario);
 ALTER TABLE Os ADD CONSTRAINT fk_os_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
-ALTER TABLE Microondas ADD CONSTRAINT fk_microondas_modelo
+ALTER TABLE Equipamento ADD CONSTRAINT fk_equipamento_modelo
 FOREIGN KEY (id_modelo) REFERENCES Modelo(id_modelo);
 
-ALTER TABLE Microondas ADD CONSTRAINT fk_microondas_status
-FOREIGN KEY (id_status) REFERENCES Status(id_status);
+ALTER TABLE Equipamento ADD CONSTRAINT fk_equipamento_status
+FOREIGN KEY (id_cor) REFERENCES Cor(id_cor);
 
 ALTER TABLE Os ADD CONSTRAINT fk_os_produto
 FOREIGN KEY (id_produto) REFERENCES Produto(id_produto);

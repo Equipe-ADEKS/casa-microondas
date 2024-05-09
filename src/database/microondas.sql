@@ -4,20 +4,22 @@ CREATE TABLE Os (
 	id_o_s INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	data_abertura DATE,
 	descricao_problema VARCHAR(200),
-    id_acessorio INTEGER NOT NULL,
-    garantia VARCHAR(100),
+	garantia VARCHAR(100),
+	dia_recebimento DATE NOT NULL,
 	valor_mo FLOAT,
 	valor_desconto FLOAT,
 	valor_produto FLOAT,
+	frete BOOLEAN NOT NULL,
 	prazo_entrega DATE NOT NULL,
 	id_status INTEGER NOT NULL,
 	id_acessorio INTEGER NOT NULL,
 	id_funcionario INTEGER NOT NULL,
 	id_filial INTEGER NOT NULL,
-	id_produto INTEGER NOT NULL
+	id_produto INTEGER NOT NULL,
+	id_plano_pagto INTEGER NOT NULL
 );
 
-CREATE TABLE TabStatus (
+CREATE TABLE TStatus (
 	id_status INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desc_status VARCHAR(100),
 	tipo_status VARCHAR(100)
@@ -25,18 +27,13 @@ CREATE TABLE TabStatus (
 
 CREATE TABLE Acessorio_OS (
 	id_acessorio_os INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_acessorio INTEGER NOT NULL,
-    id_o_s INTEGER NOT NULL
+	id_acessorio INTEGER NOT NULL,
+	id_o_s INTEGER NOT NULL
 );
 
 CREATE TABLE Acessorio (
 	id_acessorio INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desc_acessorio VARCHAR(100)
-);
-
-CREATE TABLE Categoria (
-	id_categoria INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	desc_categoria VARCHAR(100)
 );
 
 CREATE TABLE Equipamento (
@@ -46,6 +43,11 @@ CREATE TABLE Equipamento (
 	observacao VARCHAR(200) NOT NULL,
 	id_modelo INTEGER NOT NULL,
 	id_cor INTEGER NOT NULL
+);
+
+CREATE TABLE Categoria (
+	id_categoria INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	desc_categoria VARCHAR(100)
 );
 
 CREATE TABLE Modelo (
@@ -83,7 +85,7 @@ CREATE TABLE Produto (
 	codigo FLOAT,
 	unidade BOOLEAN,
 	id_filial INTEGER,
-	id_status INTEGER NOT NULL
+	id_status BOOLEAN
 );
 
 CREATE TABLE Itens_Vendidos (
@@ -99,13 +101,13 @@ CREATE TABLE Os_Servico (
 	valor_unit FLOAT,
 	quant INTEGER,
 	id_o_s INTEGER NOT NULL,
-    id_servico INTEGER NOT NULL
+	id_servico INTEGER NOT NULL
 );
 
 CREATE TABLE Servico (
 	id_servico INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    desc_servico VARCHAR(200) NOT NULL,
-    valor FLOAT
+	desc_servico VARCHAR(200) NOT NULL,
+	valor FLOAT
 );
 
 CREATE TABLE Plano_Pagamento (
@@ -123,17 +125,18 @@ CREATE TABLE Forma_Pagamento (
 CREATE TABLE Faturamento (
 	id_faturamento INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	id_venda INTEGER NOT NULL,
-    id_forma_pagto INTEGER NOT NULL
+	id_forma_pagto INTEGER NOT NULL
 );
 
 CREATE TABLE Venda (
 	id_venda INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desconto FLOAT,
-	valor_final_venda FLOAT NOT NULL
+	valor_final_venda FLOAT NOT NULL,
+	id_plano_pagto INTEGER NOT NULL
 );
 
 ALTER TABLE Os ADD CONSTRAINT fk_os_status
-FOREIGN KEY (id_status) REFERENCES Status(id_status);
+FOREIGN KEY (id_status) REFERENCES TStatus(id_status);
 
 ALTER TABLE Os ADD CONSTRAINT fk_os_acessorio
 FOREIGN KEY (id_acessorio) REFERENCES Acessorio(id_acessorio);
@@ -144,6 +147,12 @@ FOREIGN KEY (id_funcionario) REFERENCES Funcionario(id_funcionario);
 ALTER TABLE Os ADD CONSTRAINT fk_os_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
+ALTER TABLE Acessorio_OS ADD CONSTRAINT fk_acessorioos_acessorio
+FOREIGN KEY (id_acessorio) REFERENCES Acessorio(id_acessorio);
+
+ALTER TABLE Acessorio_OS ADD CONSTRAINT fk_acessorioos_os
+FOREIGN KEY (id_o_s) REFERENCES OS(id_o_s);
+
 ALTER TABLE Equipamento ADD CONSTRAINT fk_equipamento_modelo
 FOREIGN KEY (id_modelo) REFERENCES Modelo(id_modelo);
 
@@ -153,17 +162,17 @@ FOREIGN KEY (id_cor) REFERENCES Cor(id_cor);
 ALTER TABLE Os ADD CONSTRAINT fk_os_produto
 FOREIGN KEY (id_produto) REFERENCES Produto(id_produto);
 
+ALTER TABLE Os ADD CONSTRAINT fk_os_planopagto
+FOREIGN KEY (id_plano_pagto) REFERENCES Plano_Pagamento(id_plano_pagto);
+
 ALTER TABLE Modelo ADD CONSTRAINT fk_modelo_marca
 FOREIGN KEY (id_marca) REFERENCES Marca(id_marca);
-
-ALTER TABLE Modelo ADD CONSTRAINT fk_modelo_cor
-FOREIGN KEY (id_cor) REFERENCES Cor(id_cor);
 
 ALTER TABLE Produto ADD CONSTRAINT fk_produto_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
 ALTER TABLE Produto ADD CONSTRAINT fk_produto_status
-FOREIGN KEY (id_status) REFERENCES Status(id_status);
+FOREIGN KEY (id_status) REFERENCES TStatus(id_status);
 
 ALTER TABLE Itens_Vendidos ADD CONSTRAINT fk_itensvendidos_produto
 FOREIGN KEY (id_produto) REFERENCES Produto(id_produto);
@@ -176,3 +185,9 @@ FOREIGN KEY (id_o_s) REFERENCES Os(id_o_s);
 
 ALTER TABLE Os_Servico ADD CONSTRAINT fk_osservico_servico
 FOREIGN KEY (id_servico) REFERENCES Servico(id_servico);
+
+ALTER TABLE Faturamento ADD CONSTRAINT fk_faturamento_formapagto
+FOREIGN KEY (id_forma_pagto) REFERENCES Forma_Pagamento(id_forma_pagto);
+
+ALTER TABLE Venda ADD CONSTRAINT fk_venda_planopagto
+FOREIGN KEY (id_plano_pagto) REFERENCES Plano_Pagamento(id_plano_pagto);

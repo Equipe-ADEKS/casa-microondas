@@ -55,8 +55,8 @@ CREATE TABLE Funcionario (
 	id_funcionario INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	data_adm DATE,
 	data_demi DATE,
-	id_departamento INTEGER,
 	funcao VARCHAR(200),
+	id_departamento INTEGER,
 	id_filial INTEGER NOT NULL
 );
 
@@ -78,8 +78,8 @@ CREATE TABLE Usuario (
 	id_usuario INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	tipo_usuario VARCHAR(100),
 	desc_senha VARCHAR(10),
-    id_cliente INTEGER NOT NULL,
-    id_funcionario INTEGER NOT NULL
+	id_cliente INTEGER NOT NULL,
+	id_funcionario INTEGER NOT NULL
 );
 
 ALTER TABLE Pessoa ADD CONSTRAINT fk_pessoa_filial
@@ -87,6 +87,9 @@ FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
 ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
+
+ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_departamento
+FOREIGN KEY (id_departamento) REFERENCES Departamento(id_departamento);
 
 ALTER TABLE Telefone ADD CONSTRAINT fk_telefone_pessoa
 FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
@@ -102,3 +105,9 @@ FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Cliente ADD CONSTRAINT fk_cliente_pessoa
 FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
+
+ALTER TABLE Usuario ADD CONSTRAINT fk_usuario_cliente
+FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente);
+
+ALTER TABLE Usuario ADD CONSTRAINT fk_usuario_funcionario
+FOREIGN KEY (id_funcionario) REFERENCES Funcionario(id_funcionario);

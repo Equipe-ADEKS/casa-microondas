@@ -5,7 +5,7 @@ USE CASA_MICROONDAS_LOGIN;
 
 CREATE TABLE Pessoa (
 	id_pessoa INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	documento_principal VARCHAR(100),
+	documento_principal VARCHAR(100) NOT NULL,
 	documento_secundario VARCHAR(100),
 	nome_pessoa VARCHAR(100),
 	id_filial INTEGER NOT NULL
@@ -15,7 +15,7 @@ CREATE TABLE Telefone (
 	id_telefone INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	tipo_telefone BOOLEAN,
 	num_tel VARCHAR(10) NOT NULL,
-	ddd VARCHAR(3) NOT NULL DEFAULT '41',
+	ddd VARCHAR(3) NOT NULL DEFAULT '041',
 	cod_area VARCHAR(4) NOT NULL DEFAULT '+55',
 	id_pessoa INTEGER NOT NULL
 );
@@ -56,7 +56,8 @@ CREATE TABLE Funcionario (
 	data_adm DATE,
 	data_demi DATE,
 	funcao VARCHAR(200),
-	id_departamento INTEGER,
+	id_departamento INTEGER NOT NULL,
+    id_pessoa INTEGER NOT NULL,
 	id_filial INTEGER NOT NULL
 );
 
@@ -69,7 +70,6 @@ CREATE TABLE Cliente (
 	id_cliente INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome_fonetico VARCHAR(100),
 	data_cadastro_cliente DATE,
-	id_status BOOLEAN,
 	data_atualizacao DATE,
 	id_pessoa INTEGER NOT NULL
 );
@@ -87,6 +87,9 @@ FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
 
 ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_filial
 FOREIGN KEY (id_filial) REFERENCES Filial(id_filial);
+
+ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_pessoa
+FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id_pessoa);
 
 ALTER TABLE Funcionario ADD CONSTRAINT fk_funcionario_departamento
 FOREIGN KEY (id_departamento) REFERENCES Departamento(id_departamento);

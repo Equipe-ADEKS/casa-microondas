@@ -59,49 +59,41 @@ BEGIN
 
 END #
 
-create procedure Sp_Ed_Servico(
- 
-	IN id_servico int,
-	IN titulo_servico varchar(100),
-	IN desc_servico varchar(500),
-	IN img_servico varchar(100),
-	IN ativo boolean,
-	IN oper char(1),
-	OUT mensagem varchar(50))
- 
- begin
-if (oper = "U") then
-update Servico 
-	set titulo_servico = TIT,
-	desc_servico = DS,
-	img_servico = IMG,
-	ativo = atv,
-    ordem_apresentacao = ordem,
-    url_servico = url
-	where id_servico = id;
-UPDATE Servico 
-SET ativo = FALSE
-WHERE id_servico = id;
-end if;
-set mensagem = 'Operação realidada com sucesso';
 
-end #
+-- DROP PROCEDURE Sp_Ed_Servico;
+
+
+
 
 
 CREATE PROCEDURE Sp_Ins_Servico (
-    IN id INTEGER,
+    OUT id INTEGER,
     IN titulo VARCHAR(100),
     IN descricao VARCHAR(500),
     IN img VARCHAR(100),
     IN ordem INTEGER, -- se ordem_apresentacao = 0 o serviço não será apresentado
-    IN url VARCHAR(100)
+    IN url VARCHAR(100),
+    IN atv BOOLEAN,
+    OUT mensagem VARCHAR(50)
 )
 BEGIN
-    INSERT INTO Servico (id_servico, titulo_servico, desc_servico, img_servico, ordem_apresentacao, url_servico)
-    VALUES (id, titulo, descricao, img, ordem, url);
+	set id = null;
+	IF EXISTS (select titulo_servico FROM Servico 	WHERE titulo_servico = titulo) THEN SET mensagem = 'esse serviço j aexiust' ;
+    
+    else
+    INSERT INTO Servico ( titulo_servico, desc_servico, img_servico, ordem_apresentacao, url_servico, ativo)
+    VALUES ( titulo, descricao, img, ordem, url, atv);
+    set id = last_insert_id();
+    set mensagem = "servico inserido";
+    end if;
+    
 END #
 
+DELIMITER ;
 
+
+
+SELECT * FROM Servico;
 
 
 

@@ -197,4 +197,8 @@ FOREIGN KEY (id_plano_pagto) REFERENCES Plano_Pagamento(id_plano_pagto);
 
 alter table Servico  add column ativo boolean;
 
+alter table Marca add  column ativo boolean;
+
+
+select * from Marca;
 

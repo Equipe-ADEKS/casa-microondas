@@ -136,6 +136,7 @@ INSERT INTO Tipo_Atendimento (desc_tipo_atendimento) VALUES
 ('Instalação'),
 ('Consultoria');
 
+
 -- Inserindo valores na tabela Produto
 /*INSERT INTO Produto (desc_produto, quant_produto, valor_custo, valor_venda, data_cadastro, quant_min, quant_estoque, acessorio, ft_balcao, codigo) VALUES
 ('Microondas 20L', 100, 150.00, 300.00, '2020-01-01', 10, 100, 1, 0, 1001),

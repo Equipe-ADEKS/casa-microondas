@@ -19,10 +19,10 @@ function Header () {
 				<Link to="/shop" className="navegacao_botao">Vendas</Link>
 				<Link to="/localization" className="navegacao_botao">Localização</Link>
 				<Link to="/informations" className="navegacao_botao">Conserto em 30 minutos</Link>
-				<Link to="/contacts" className="navegacao_botao">Fazer orçamento</Link>
+				<Link to="/contacts" className="navegacao_botao">Faça um orçamento</Link>
 			</nav>
 			<div className="utilidades">
-				<button className="botao" onclick="Theme_Changer()">Mudar Tema</button>
+				<Theme_Changer />
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
                 <Link to="/account_login"><FontAwesomeIcon icon="fa fa-user" /></Link>                            
                 <button className="botao"><FontAwesomeIcon icon="fas fa-shopping-cart" /></button>    

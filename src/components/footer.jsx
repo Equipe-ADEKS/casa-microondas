@@ -28,8 +28,7 @@ function Footer () {
 		</div>
 		<div className="footer_footer">
 			<div className="rodape_esc">
-				<a className="rodape_botao" href="./html/error.html">Sobre nós</a>
-				<a className="rodape_botao" href="./html/contact.html">Contate-nos</a>
+				Implantado e Customizado por Equipe JEKAD
 			</div>
 			<p>© 2024 Casa do Microondas. Todos os direitos reservados.</p>
 		</div>

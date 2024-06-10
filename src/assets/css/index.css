@@ -1,3 +1,26 @@
+.msg_bemvindo{
+	margin-left: 150px;
+	padding: 10px 20px;
+	font-size: 32px;
+}
+
+.navegacao_usuario{
+	width: 700px;
+	padding: 10px 30px;
+    display: flex;
+	justify-content: center;
+	gap: 20px;
+	border-top : solid 1px white ;
+	margin: 0 auto;
+}
+
+.navegacao_usuario a{
+   text-decoration: none;
+   color: white;
+   padding: 40px;
+
+}
+
 .imagem_principal {
 	width: 100%;
 	text-align: center;

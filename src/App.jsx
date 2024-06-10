@@ -3,8 +3,8 @@ import MyRoutes from "./routes.js"
 function App() 
 {
   return (
-    <MyRoutes/>
-  );
+    <MyRoutes />
+  )
 }
 
 export default App;

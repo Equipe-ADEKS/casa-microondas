@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
 	--cor-principal-dark: #22262c;
 	--cor-texto-dark: white;
 	--cor-secundaria-dark: #2d3138;
@@ -16,9 +16,24 @@
 
 
 body {
-	color: var(--cor-texto-dark);
-	background-color: var(--cor-principal-dark);
+	color: #FFFFFF;
+	background-color: #22262C;
 	font-family: "Inter", sans-serif;
+}
+
+.theme_main {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.theme_header {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.theme_footer {
+	background-color: #FFFFFF;
+	color: #000000;
 }
 
 .mensage {
@@ -28,13 +43,13 @@ body {
 	padding: 15px;
 }
 
-.inicio_barra{
+.inicio_barra {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
 
-.inicio_barra{
+.inicio_barra {
 	cursor: pointer;
 	font-size: 24px;
 }
@@ -42,14 +57,14 @@ body {
 header {
 	position: sticky;
 	top: -5px;
-	background-color: var(--cor-principal-dark);
+	background-color: #22262C;
 	padding: 10px 30px 0 30px;
 	width: 100%;
 }
 
 header a {
 	position: relative;
-	color: var(--cor-texto-dark);
+	color: #FFFFFF;
 	text-decoration: none; 
 }
 
@@ -60,7 +75,7 @@ header a:before {
 	height: 1px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--cor-texto-dark);
+	background-color: #22262C;
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -81,7 +96,7 @@ header .inicio {
 	align-items: center;
 }
 
-.botao{
+.botao {
 	cursor: pointer;
 }
 
@@ -120,16 +135,16 @@ header .inicio .utilidades button {
 	font-size: 18px;
 }
 
-#icon{
+#icon {
     font-size: 17px;
     color: var(--cor-texto-dark);
 }
 
-.titulo{
+.titulo {
     text-align: center;
     margin: 20px 0 20px 0;
 }
-.marcas{
+.marcas {
     background-color: var(--cor-texto-dark);
     color: black;
     text-align: center;
@@ -138,7 +153,7 @@ header .inicio .utilidades button {
     border-radius: 8px;
 }
 
-.menu_lateral{
+.menu_lateral {
 	width: 0px;
 	min-height: 100vh;
 	position: fixed;
@@ -148,7 +163,7 @@ header .inicio .utilidades button {
 	overflow: hidden;
 }
 
-.menu_lateral_back{
+.menu_lateral_back {
 	margin-top: 10px;
 	margin-left: 10px;
 }
@@ -156,7 +171,7 @@ header .inicio .utilidades button {
 .menu_lateral_back i {
 	font-size: 24px;
 }
-.menu_lateral_back button{
+.menu_lateral_back button {
 	border: none;
 	background-color: #2d3138;
 	padding: 10px;
@@ -164,13 +179,13 @@ header .inicio .utilidades button {
 	color: #fff;
 }
 
-.menu_lateral_back span{
+.menu_lateral_back span {
 	background-color: #2d3138;
 	border-radius: 50%;
 	padding: 10px;
 }
 	
-.menu_lateral_content{
+.menu_lateral_content {
 	display: flex;
 	flex-direction: column;
 	padding: 24px 0px;
@@ -179,11 +194,11 @@ header .inicio .utilidades button {
 	transition: 2s;
 }
 
-.menu_lateral a:hover{
+.menu_lateral a:hover {
 	text-decoration: underline white;
 }
 
-.menu_lateral_content div{
+.menu_lateral_content div {
 	display: flex;
 	gap: 15px;
 	align-items: center;
@@ -191,19 +206,19 @@ header .inicio .utilidades button {
 	padding: 10px;
 }
 
-.menu_lateral_content img{
+.menu_lateral_content img {
 	width: 60px;
 	height: 60px;
 	border-radius: 5px;
 	margin-left:  16px;
 }
 
-.menu_lateral_content a{
+.menu_lateral_content a {
 	text-decoration: none;
 	color: white;
 }
 
-.menu_lateral_functions{
+.menu_lateral_functions {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
@@ -211,12 +226,12 @@ header .inicio .utilidades button {
 	border-bottom: solid 0.1px rgba(255, 255, 255, 0.277);
 	padding: 40px 30px;
 }
-.menu_lateral_functions a{
+.menu_lateral_functions a {
 	text-decoration: none;
 	color: white;
 }
 
-.menu_lateral_other{
+.menu_lateral_other {
 	display: flex;
 	justify-content: left;
 	gap: 20px;
@@ -224,7 +239,7 @@ header .inicio .utilidades button {
 	height: 80px;
 }
 
-.menu_lateral_other a{
+.menu_lateral_other a {
 	text-decoration: none;
 	color: #fff;
 	margin-left: 30px;
@@ -232,14 +247,14 @@ header .inicio .utilidades button {
 	padding-right: 25px;
 }
 
-.menu_lateral_other button{
+.menu_lateral_other button {
 	border: none;
 	background-color: transparent;
 	color: white;
 	font-size: 16px;
 }
 
-.menu_carrinho{
+.menu_carrinho {
 	width: 0px;
 	height: 100vh;
 	position: fixed;
@@ -250,7 +265,7 @@ header .inicio .utilidades button {
 	overflow: hidden;
 }
 
-.menu_carrinho div button{
+.menu_carrinho div button {
 	width: 400px;
 	text-align: center;
 	padding: 12px;
@@ -264,7 +279,7 @@ header .inicio .utilidades button {
 	font-size: 16px;
 }
 
-.principal{
+.principal {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -272,11 +287,11 @@ header .inicio .utilidades button {
 	text-align: center;
 }
 
-.principal i{
+.principal i {
 	font-size: 60px;
 }
 
-.principal p{
+.principal p {
 	font-size: 20px;
 }
 
@@ -368,7 +383,7 @@ footer .footer_footer .rodape_esc .rodape_botao {
 	color: white;
 }
 
-.title{
+.title {
     font-family: "Alfa Slab One", serif;
     font-weight: 400;
     font-size: 70px;
@@ -376,44 +391,37 @@ footer .footer_footer .rodape_esc .rodape_botao {
     color: beige;
     text-transform: uppercase;
 }
-.subtitle{
+.subtitle {
     font-size: 20px;
     margin-left: 130px;
     margin-bottom: 30px;
 }
-.name_map{
-    text-align: center;
-}
-.map{
-    text-align: center;
-    margin: 20px 0 30px 0;
-}
-.map_content{
-    width: 1200px;
-    height: 600px;
-}
-.banner{
+
+.banner {
     width: 100%;
     text-align: center;
     margin: 40px 0 50px 0;
 }
-.banner_content{
+
+.banner_content {
     border-radius: 10px;
 }
-.text_info{
+
+.text_info {
     padding: 100px;
 }
-.logo_agradecimento{
+
+.logo_agradecimento {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo_branca{
+.logo_branca {
     width: 300px;
 }
 
-.light body{
+.light body {
 	background-color: var(--cor-primaria-light);
 	color: var(--cor-texto-light); 
 }

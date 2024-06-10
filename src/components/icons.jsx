@@ -16,4 +16,4 @@ library.add(...all)
         const user_icon = <FontAwesomeIcon icon="fa-solid fa-user" />
 } */
 
-export default Icons;
+export default Icons

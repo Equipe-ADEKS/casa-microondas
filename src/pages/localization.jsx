@@ -1,4 +1,4 @@
-// import '../assets/css/localization.css'
+import '../assets/css/localization.css'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
 

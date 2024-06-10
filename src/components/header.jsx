@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom"
+import Theme_Changer from "./theme.jsx"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faFontAwesome, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
 
-library.add(faFontAwesome, faTwitter, faFacebook, faInstagram)
+library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun)
 
-function Header ()
-{
+function Header () {
     return (
         <header>
 		<div className="inicio">
 			<div className="inicio_barra">
                 <i id="barra_lateral_esquerdo" className="fa-solid fa-bars"></i>
-                <h1 className="nome"><strong>Casa do Microondas</strong></h1>
+                <Link to="/"><h1 className="nome"><strong>Casa do Microondas</strong></h1></Link>
             </div>
 			<nav className="navegacao">
-				<Link to="/" className="navegacao_botao">home</Link>
-				<Link to="/localization" className="navegacao_botao">localização</Link>
-				<Link to="/informations" className="navegacao_botao">conserto em 30 minutos</Link>
-				<Link to="/contacts" className="navegacao_botao">contato</Link>
+				<Link to="/" className="navegacao_botao">Home</Link>
+				<Link to="/shop" className="navegacao_botao">Vendas</Link>
+				<Link to="/localization" className="navegacao_botao">Localização</Link>
+				<Link to="/informations" className="navegacao_botao">Conserto em 30 minutos</Link>
+				<Link to="/contacts" className="navegacao_botao">Fazer orçamento</Link>
 			</nav>
 			<div className="utilidades">
-				<button className="botao"><i className="fa-regular fa-moon"></i> Night</button> 
-                <button className="botao"><i className="fa-solid fa-magnifying-glass"></i></button>
-                <Link to="/user_login"><i id="icon" className="fa-regular fa-user"></i></Link>                            
-                <button className="botao"><i className="fa-solid fa-cart-shopping"></i></button>    
+				<button className="botao" onclick="Theme_Changer()">Mudar Tema</button>
+                <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
+                <Link to="/account_login"><FontAwesomeIcon icon="fa fa-user" /></Link>                            
+                <button className="botao"><FontAwesomeIcon icon="fas fa-shopping-cart" /></button>    
 			</div>
 		</div>
 	    </header>

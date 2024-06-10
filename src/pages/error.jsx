@@ -1,8 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 import '../assets/css/error.css'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
+
+library.add( faTriangleExclamation )
 
 const Error = () => {
     return (

@@ -2,8 +2,7 @@ import '../assets/css/index.css'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
 
-function Index ()
-{
+const Index = () => {
     return (
         <>
         <p class="mensage">Bem Vindo a Casa do Microondas</p>
@@ -169,4 +168,4 @@ function Index ()
     )
 }
 
-export default Index
+export default Index;

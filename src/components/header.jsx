@@ -1,3 +1,9 @@
+import { Link } from "react-router-dom"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faFontAwesome, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+library.add(faFontAwesome, faTwitter, faFacebook, faInstagram)
+
 function Header ()
 {
     return (
@@ -8,15 +14,15 @@ function Header ()
                 <h1 className="nome"><strong>Casa do Microondas</strong></h1>
             </div>
 			<nav className="navegacao">
-				<a className="navegacao_botao" href="./index.html">home</a>
-				<a className="navegacao_botao" href="./html/localization.html">localização</a>
-				<a className="navegacao_botao" href="./html/informations.html">conserto em 30 minutos</a>
-				<a className="navegacao_botao" href="./html/contact.html">contato</a>
+				<Link to="/" className="navegacao_botao">home</Link>
+				<Link to="/localization" className="navegacao_botao">localização</Link>
+				<Link to="/informations" className="navegacao_botao">conserto em 30 minutos</Link>
+				<Link to="/contacts" className="navegacao_botao">contato</Link>
 			</nav>
 			<div className="utilidades">
 				<button className="botao"><i className="fa-regular fa-moon"></i> Night</button> 
                 <button className="botao"><i className="fa-solid fa-magnifying-glass"></i></button>
-                <a href="../src/html/account_login.html"><i id="icon" className="fa-regular fa-user"></i></a>                            
+                <Link to="/user_login"><i id="icon" className="fa-regular fa-user"></i></Link>                            
                 <button className="botao"><i className="fa-solid fa-cart-shopping"></i></button>    
 			</div>
 		</div>

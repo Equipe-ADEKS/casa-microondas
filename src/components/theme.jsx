@@ -6,7 +6,7 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 library.add( faMoon, faSun ) 
 
-const Button = ({ label, icon, isClicked }) => {
+/* const Button = ({ label, icon, isClicked }) => {
   const [icon, setIcon] = useState(icon);
   const [label, setLabel] = useState(label);
 
@@ -16,16 +16,19 @@ const Button = ({ label, icon, isClicked }) => {
       {label}
     </button>
   );
-};
+}; */
 
-function Theme_Changer () {
+function ThemeChanger () {
 
     var element = document.body;
     element.classList.toggle("dark-theme");
 
-    return (
-        <button className="botao" onClick={Button()}>Mudar Tema</button>
-    )
 } 
 
-export default Theme_Changer
+function ThemeChangerButton () {
+  return (
+      <button className="botao" onClick={ThemeChanger}>Mudar Tema</button>
+  )
+}
+
+export default ThemeChangerButton

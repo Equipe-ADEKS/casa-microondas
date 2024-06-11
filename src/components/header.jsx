@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Theme_Changer from "./theme.jsx"
+import ThemeChangerButton from "./theme.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
@@ -22,7 +22,7 @@ function Header () {
 				<Link to="/contacts" className="navegacao_botao">Faça um orçamento</Link>
 			</nav>
 			<div className="utilidades">
-				<Theme_Changer />
+				<ThemeChangerButton />
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
                 <Link to="/account_login"><FontAwesomeIcon icon="fa fa-user" /></Link>                            
                 <button className="botao"><FontAwesomeIcon icon="fas fa-shopping-cart" /></button>    

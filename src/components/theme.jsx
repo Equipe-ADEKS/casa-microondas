@@ -27,7 +27,7 @@ function ThemeChanger () {
 
 function ThemeChangerButton () {
   return (
-      <button className="botao" onClick={ThemeChanger()}><FontAwesomeIcon icon="fa-regular fa-moon"/>Mudar Tema</button>
+      <button className="botao" onClick={ThemeChanger()}>Mudar Tema</button>
   )
 }
 

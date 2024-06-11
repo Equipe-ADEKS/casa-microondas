@@ -232,7 +232,7 @@ footer .footer_footer .rodape_esc .rodape_botao {
 	text-decoration: none;
 	color: var(--cor-texto-dark);
 }
-
+/*
 .light body {
 	background-color: var(--cor-primaria-light);
 	color: var(--cor-texto-light); 
@@ -240,4 +240,4 @@ footer .footer_footer .rodape_esc .rodape_botao {
 
 .light .author_section .author {
 	background-color: var(--cor-secundaria-light);
-}
+}*/

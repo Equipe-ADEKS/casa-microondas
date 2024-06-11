@@ -137,6 +137,20 @@ INSERT INTO Tipo_Atendimento (desc_tipo_atendimento) VALUES
 ('Consultoria');
 
 
+
+
+INSERT INTO Servico (titulo_servico, desc_servico, img_servico, ordem_apresentacao, url_servico) VALUES
+('Título 1', 'Descrição do serviço 1', 'imagem1.jpg', 1, 'url1'),
+('Título 2', 'Descrição do serviço 2', 'imagem2.jpg', 2, 'url2'),
+('Título 3', 'Descrição do serviço 3', 'imagem3.jpg', 0, 'url3'),
+('Título 4', 'Descrição do serviço 4', 'imagem4.jpg', 3, 'url4');
+
+
+INSERT INTO Equipamento (tamanho, voltagem, observacao, id_categoria, id_modelo, id_cor) VALUES
+('300L', '220V', 'Geladeira grande', 2, 2, 2),
+('4 bocas', '110V', 'Fogão econômico', 3, 3, 3),
+('10kg', '220V', 'Lava roupas eficiente', 4, 4, 4),
+('50"', '110V', 'TV de alta definição', 5, 5, 5);
 -- Inserindo valores na tabela Produto
 /*INSERT INTO Produto (desc_produto, quant_produto, valor_custo, valor_venda, data_cadastro, quant_min, quant_estoque, acessorio, ft_balcao, codigo) VALUES
 ('Microondas 20L', 100, 150.00, 300.00, '2020-01-01', 10, 100, 1, 0, 1001),
@@ -147,11 +161,7 @@ INSERT INTO Tipo_Atendimento (desc_tipo_atendimento) VALUES
 
 -- Inserindo valores na tabela Equipamento
 -- Continuando a inserção na tabela Equipamento
-INSERT INTO Equipamento (tamanho, voltagem, observacao, id_categoria, id_modelo, id_cor) VALUES
-('300L', '220V', 'Geladeira grande', 2, 2, 2),
-('4 bocas', '110V', 'Fogão econômico', 3, 3, 3),
-('10kg', '220V', 'Lava roupas eficiente', 4, 4, 4),
-('50"', '110V', 'TV de alta definição', 5, 5, 5);
+
 
 -- Inserindo valores na tabela Os
 INSERT INTO Os (data_abertura, descricao_problema, garantia, dia_recebimento, valor_desconto, valor_produto, frete, prazo_entrega, id_status, id_acessorio, id_funcionario, id_produto) VALUES

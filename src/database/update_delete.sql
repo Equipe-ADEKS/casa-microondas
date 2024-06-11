@@ -64,8 +64,44 @@ select * from Marca;
 
 
 
+<<<<<<< HEAD
+=======
+
+-- DROP PROCEDURE Sp_Ed_Servico;
 
 
+
+
+
+CREATE PROCEDURE Sp_Ins_Servico (
+    OUT id INTEGER,
+    IN titulo VARCHAR(100),
+    IN descricao VARCHAR(500),
+    IN img VARCHAR(100),
+    IN ordem INTEGER, -- se ordem_apresentacao = 0 o serviço não será apresentado
+    IN url VARCHAR(100),
+    IN atv BOOLEAN,
+    OUT mensagem VARCHAR(50)
+)
+BEGIN
+	set id = null;
+	IF EXISTS (select titulo_servico FROM Servico 	WHERE titulo_servico = titulo) THEN SET mensagem = 'esse serviço j aexiust' ;
+    
+    else
+    INSERT INTO Servico ( titulo_servico, desc_servico, img_servico, ordem_apresentacao, url_servico, ativo)
+    VALUES ( titulo, descricao, img, ordem, url, atv);
+    set id = last_insert_id();
+    set mensagem = "servico inserido";
+    end if;
+    
+END #
+>>>>>>> fefe0a92cdddba52b468edcf3968518f91f91056
+
+DELIMITER ;
+
+
+
+SELECT * FROM Servico;
 
 
 

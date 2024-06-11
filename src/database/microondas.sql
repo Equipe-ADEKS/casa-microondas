@@ -47,11 +47,16 @@ CREATE TABLE Equipamento (
 	id_cor INTEGER NOT NULL
 );
 
+alter table Equipamento add column categoria integer;
+alter table Equipamento add column ativo boolean;
+alter table Equipamento add column modelo integer;
+alter table Equipamento add column cor integer;
+
 CREATE TABLE Categoria (
 	id_categoria INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	desc_categoria VARCHAR(100)
 );
-
+alter table Categoria add  column ativo boolean;
 
 create table Modelo (
 id_modelo integer not null primary key auto_increment,

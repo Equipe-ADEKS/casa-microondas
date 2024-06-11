@@ -17,7 +17,7 @@
 
 body {
 	color: var(--cor-texto-light);
-	background-color: var(--cor-principal-light);
+	background-color: var(--cor-primaria-light);
 	font-family: "Inter", sans-serif;
 }
 
@@ -47,14 +47,14 @@ body {
 header {
 	position: sticky;
 	top: -5px;
-	background-color: var(--cor-primaria-light);
+	background-color: var(--cor-principal-dark);
 	padding: 10px 30px 0 30px;
 	width: 100%;
 }
 
 header a {
 	position: relative;
-	color: var(--cor-texto-light);
+	color: var(--cor-texto-dark);
 	text-decoration: none; 
 }
 
@@ -65,7 +65,7 @@ header a:before {
 	height: 1px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--cor-texto-light);
+	background-color: var(--cor-principal-dark);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -102,7 +102,7 @@ header .inicio .navegacao {
 
 header .inicio .navegacao .navegacao_botao {
     text-decoration: none;
-    color: var(--cor-texto-light);
+    color: var(--cor-texto-dark);
     font-size: 16px;
     text-transform: uppercase ;
 }
@@ -119,15 +119,15 @@ header .inicio .utilidades button {
 	align-items: center;
 	padding: 8px 10px;
 	border-radius: 8px;
-	background-color: var(--cor-primaria-light);
+	background-color: var(--cor-principal-dark);
 	border: none;
-	color: var(--cor-texto-light);
+	color: var(--cor-texto-dark);
 	font-size: 18px;
 }
 
 #icon {
     font-size: 17px;
-    color: var(--cor-texto-light);
+    color: var(--cor-texto-dark);
 }
 
 .titulo {
@@ -144,6 +144,8 @@ header .inicio .utilidades button {
 }
 
 footer {
+	color: var(--cor-texto-dark);
+	background-color: var(--cor-principal-dark);
 	width: 100%;
 	margin: 0 auto;
 	border-top: solid 1px var(--cor-texto-light);
@@ -162,7 +164,7 @@ footer a:before {
 	height: 1px;
 	bottom: 0;
 	left: 0;
-	background-color: white;
+	background-color: var(--cor-principal-dark);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -197,7 +199,7 @@ footer .footer_content .footer_social .social_media {
 }
 
 footer .footer_content .footer_social .social_media a {
-	color: var(--cor-texto-light);
+	color: var(--cor-texto-dark);
 }
 
 footer .footer_content .footer_links {
@@ -215,58 +217,20 @@ footer .footer_content .footer_links .links_rapidos {
 
 footer .footer_content .footer_links .links_rapidos a {
 	text-decoration: none;
-	color: var(--cor-texto-light);
+	color: var(--cor-texto-dark);
 }
 
 footer .footer_footer {
 	display: flex;
 	justify-content: space-between;
-	border-top: solid 0.5px #000000;
+	border-top: solid 0.5px var(--cor-primaria-light);
 	padding: 15px;
 	margin-bottom: 10px;
 }
 
 footer .footer_footer .rodape_esc .rodape_botao {
 	text-decoration: none;
-	color: var(--cor-texto-light);
-}
-
-.title {
-    font-family: "Alfa Slab One", serif;
-    font-weight: 400;
-    font-size: 70px;
-    margin-left: 100px;
-    color: beige;
-    text-transform: uppercase;
-}
-.subtitle {
-    font-size: 20px;
-    margin-left: 130px;
-    margin-bottom: 30px;
-}
-
-.banner {
-    width: 100%;
-    text-align: center;
-    margin: 40px 0 50px 0;
-}
-
-.banner_content {
-    border-radius: 10px;
-}
-
-.text_info {
-    padding: 100px;
-}
-
-.logo_agradecimento {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo_branca {
-    width: 300px;
+	color: var(--cor-texto-dark);
 }
 
 .light body {

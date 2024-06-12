@@ -1,0 +1,21 @@
+main{
+    display: flex;
+}
+
+.div1{
+    display: flex;
+    width: 40%;
+    background-color: aqua;
+}
+
+.user_name{
+    display: flex;
+    flex-direction: column;
+}
+
+.div2{
+    display: flex;
+    width: 60%;
+    min-height: 100vh;
+    background-color: blueviolet;
+}

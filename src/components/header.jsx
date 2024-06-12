@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
 import ShopMenuButton from "./shop_menu.jsx"
 import AccountLoginButton from "./disconnect_user.jsx"
+import AccountLoggedButton from "./user_login.jsx"
 
 library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun)
 
@@ -26,7 +27,7 @@ function Header () {
 			<div className="utilidades">
 				{/* <ThemeChangerButton /> */}
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
-				<AccountLoginButton />
+				<AccountLoggedButton />
 				<ShopMenuButton />   
 			</div>
 		</div>

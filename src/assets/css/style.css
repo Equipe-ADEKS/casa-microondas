@@ -48,7 +48,7 @@ header {
 	position: sticky;
 	top: -5px;
 	background-color: var(--cor-principal-dark);
-	padding: 10px 30px 0 30px;
+	padding: 10px 30px 10px 30px;
 	width: 100%;
 }
 
@@ -65,7 +65,7 @@ header a:before {
 	height: 1px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--cor-principal-dark);
+	background-color: var(--cor-primaria-light);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);

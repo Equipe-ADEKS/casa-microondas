@@ -15,11 +15,7 @@
     "react-dom": "^18.3.1",
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^6.23.1",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
-    "react-scripts": "^3.0.1",
->>>>>>> 5fd55d2604acaaf47166d1ac1c8bb146b72ab772
     "theme-ui": "^0.16.2",
     "web-vitals": "^2.1.4"
   },

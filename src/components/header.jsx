@@ -3,6 +3,8 @@ import ThemeChangerButton from "./theme.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
+import ShopMenuButton from "./shop_menu.jsx"
+import AccountLoginButton from "./disconnect_user.jsx"
 
 library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun)
 
@@ -22,10 +24,10 @@ function Header () {
 				<Link to="/contacts" className="navegacao_botao">Faça um orçamento</Link>
 			</nav>
 			<div className="utilidades">
-				<ThemeChangerButton />
+				{/* <ThemeChangerButton /> */}
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
-                <Link to="/account_login"><FontAwesomeIcon icon="fa fa-user" /></Link>                            
-                <button className="botao"><FontAwesomeIcon icon="fas fa-shopping-cart" /></button>    
+				<AccountLoginButton />
+				<ShopMenuButton />   
 			</div>
 		</div>
 	    </header>

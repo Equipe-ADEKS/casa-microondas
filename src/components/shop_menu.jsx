@@ -1,12 +1,13 @@
 import '../assets/css/shop_menu.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBox } from '@fortawesome/free-solid-svg-icons'
+import { faBox, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { useState } from "react";
 
-library.add(faBox)
+library.add( faBox , faShoppingCart )
 
-function ShopMenu () {
+const ShopMenu = () => {
     return (
         <>
         <div className="menu_carrinho">
@@ -21,5 +22,15 @@ function ShopMenu () {
         </>
     )
 }
+function ShopMenuButton () {
+    const [show, setShow] = useState(true);
 
-export default ShopMenu
+    return (
+        <div className="botao">
+            <button onClick={() => setShow(!show)}>
+            {show ? <ShopMenu /> : null}<FontAwesomeIcon icon="fas fa-shopping-cart" /></button>
+        </div>
+    );
+}
+
+export default ShopMenuButton

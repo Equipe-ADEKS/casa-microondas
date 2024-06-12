@@ -17,7 +17,7 @@ const Error = () => {
                 <div>
                     <FontAwesomeIcon icon="fa-solid fa-triangle-exclamation" className="warning"/>
                     <p>Desculpe-nos, essa página ainda não esta pronta.</p>
-                    <img src="./logo-branca.png" alt=""></img>
+                    <img src="./logo-preta.png" alt=""></img>
                 </div>
             </section>
         </main>

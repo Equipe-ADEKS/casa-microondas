@@ -8,7 +8,7 @@ const Informations = () => {
         <Header />
         <main>
             <div className="banner">
-                <img className="banner_content" src="./banner/banner-microondas2.png" alt=""></img>
+                <img className="banner_content" src="./banner/banner-microondas2.png" alt=""/>
             </div>
             <h1 className="title">conserto em 30 minutos</h1>
             <div className="text_info">
@@ -26,7 +26,7 @@ const Informations = () => {
                 <h3><li>Não serão avaliados na hora os micro-ondas de Convecção, Fornos Elétricos Fischer Lumen, Fornos Elétricos de Embutir 60L de qualquer marca, maquinas de pão ou qualquer outro aparelho que o técnico julgar necessário mais tempo para avaliação.</li></h3><br />
                 <h3>DENTRO DOS 30 MINUTOS ESTÁ INCLUSO A LIMPEZA E HIGIENIZAÇÃO. MAS CASO O APARELHO ESTEJA MUITO ENGORDURADO, COM PÓ INCRUSTADOS OU PRECISE DE CUIDADOS EXTRAS (POLIMENTO, TIRAR MANCHAS, LIMPEZA DOS DUTOS) PODE DEMORAR UM POUCO MAIS.</h3><br />
                 <div className="logo_agradecimento">
-                    <img className="logo_branca" src="./logo-branca.png" alt=""></img>
+                    <img className="logo_branca" src="./logo-branca.png" alt=""/>
                     <h3>CONTAMOS COM SUA COMPREENSÃO.</h3>
                 </div>
             </div>

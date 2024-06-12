@@ -1,0 +1,38 @@
+.title {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-size: 70px;
+    margin-left: 100px;
+    color: var(--cor-texto-light);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-left: 130px;
+    margin-bottom: 30px;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 50px 0;
+}
+
+.banner_content {
+    border-radius: 10px;
+}
+
+.text_info {
+    padding: 100px;
+}
+
+.logo_agradecimento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_branca {
+    width: 300px;
+}

@@ -1,0 +1,9 @@
+.kfvbhs{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 20px 0 50px 0;
+}
+.shop{
+    display: flex;
+}

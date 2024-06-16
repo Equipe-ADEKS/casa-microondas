@@ -1,7 +1,7 @@
 import '../assets/css/main_menu.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faMoon, faUser, faX } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faUser, faX} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 library.add(faX, faMoon, faUser)

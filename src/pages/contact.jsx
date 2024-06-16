@@ -1,9 +1,29 @@
 import "../assets/css/contact.css"
 import Header from "../components/header.jsx"
 import Footer from "../components/footer.jsx"
+// import API from "../api.jsx"
+
+
 
 const Contact = () => {
-    return (
+//     function btnEnviarClick(){
+// 		let cliente = document.getElementById("nome").values;
+// 		let assunto = document.getElementById("subjet").values;
+// 		let phone = document.getElementById("telephone").values;
+// 		let message = document.getElementById("message").values; 
+// 		let tipoCham = 'Contato';
+
+		// api.post('/chamado', {cliente, assunto, phone, message, tipoCham})
+	// 		.then( (resp) =>{
+	// 			console.log(resp);
+	// 			alert('OS dados foram enviados com sucesso');
+	// 		})
+	// 		.catch((err) => {
+	// 			console.error(err);
+	// 			alert('Erro ao enviar os dados de contato');
+	// 		})
+	// }
+	return (
         <>
         <Header />
         <main>

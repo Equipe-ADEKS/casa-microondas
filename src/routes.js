@@ -7,6 +7,7 @@ import Contact from './pages/contact.jsx'
 import Account_Login from './pages/account_login.jsx'
 import LoggedInUser from './pages/loggedin_user.jsx'
 import Shop from './pages/shop.jsx'
+import Admin_logged from './pages/admin.jsx'
 import Error from './pages/error.jsx'
 
 
@@ -21,6 +22,7 @@ const MyRoutes = () => {
                 <Route Component = { Account_Login } path="/account_login" />
                 <Route Component = { LoggedInUser } path="/loggedin_account" />
                 <Route Component = { Shop } path="/shop" />
+                <Route Component = { Admin_logged } path="/admin" />
                 <Route Component = { Error } path="*" />
             </Routes>
         </BrowserRouter>

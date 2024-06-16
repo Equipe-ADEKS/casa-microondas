@@ -1,0 +1,48 @@
+.lgd{
+    display: flex;
+}
+
+.div1{
+    display: flex;
+    width: 20%;
+    background-color: #DCDCDC;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.user_name{
+    display: flex;
+    background-color: #C0C0C0;
+    height: 100px;
+    align-items: center;
+    padding: 0 0 25px 50px;
+}
+
+.user_name h2{
+    font-size: 15px;
+}
+
+.user_name img{
+    width: 75px;
+    height: 75px;
+    margin-top: 25px;
+    border-radius: 50%;
+}
+
+.menu_bar{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 18px;
+    padding: 50px 0 0 20px;
+}
+
+.menu_bar div{
+    display: flex;
+    gap: 10px;
+}
+
+.menu_bar div img{
+    width: 20px;
+    height: 20px;
+}

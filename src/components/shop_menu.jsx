@@ -22,15 +22,13 @@ const ShopMenu = () => {
         </>
     )
 }
+
 function ShopMenuButton () {
     const [show, setShow] = useState(true);
 
-    return (
-        <div className="botao">
-            <button onClick={() => setShow(!show)}>
-            {show ? <ShopMenu /> : null}<FontAwesomeIcon icon="fas fa-shopping-cart" /></button>
-        </div>
-    );
+    /* return (
+
+    ) */
 }
 
 export default ShopMenuButton

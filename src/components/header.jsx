@@ -6,6 +6,7 @@ import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@forta
 import ShopMenuButton from "./shop_menu.jsx"
 import AccountLoginButton from "./disconnect_user.jsx"
 import AccountLoggedButton from "./user_login.jsx"
+import AdminLoggedButton from "./admin_logged.jsx"
 
 library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun)
 
@@ -27,7 +28,7 @@ function Header () {
 			<div className="utilidades">
 				{/* <ThemeChangerButton /> */}
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
-				<AccountLoggedButton />
+				<AdminLoggedButton />
 				<ShopMenuButton />   
 			</div>
 		</div>

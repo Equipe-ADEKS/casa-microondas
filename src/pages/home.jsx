@@ -1,6 +1,7 @@
 import '../assets/css/home.css'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
+import Gallery from '../components/carousel.jsx'
 
 const Home = () => {
     return (
@@ -10,6 +11,8 @@ const Home = () => {
 		<div className="imagem_principal">
 			<img className="imagem_principal_conteudo" src="./cabecalho.png" alt=""/>
 		</div>
+		<h2 className="title_carousel">Marcas com que trabalhamos</h2>
+		<Gallery />
 		<section className="shop">
 			<div className="shop_content">
 				<img src="./shop/shop_cadeira.jpg" alt=""/>

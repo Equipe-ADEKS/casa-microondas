@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .msg_bemvindo{
 	margin-left: 150px;
 	padding: 10px 20px;
@@ -32,6 +34,17 @@
 	width: 86.875rem;
 	border-radius: 8px;    
 }
+
+.carouselImages {
+    width: 600px;
+    height: 200px;
+}
+
+.carouselImagesLG{
+    width: 300px;
+    height: 200px;
+}
+
 
 .shop {
 	display: flex;

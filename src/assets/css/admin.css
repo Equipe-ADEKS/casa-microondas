@@ -1,5 +1,6 @@
 .lgd{
     display: flex;
+    flex-direction: column;
 }
 
 .div1{
@@ -8,6 +9,7 @@
     background-color: #DCDCDC;
     flex-direction: column;
     height: 100vh;
+    position: fixed;
 }
 
 .user_name{
@@ -45,4 +47,50 @@
 .menu_bar div img{
     width: 20px;
     height: 20px;
+}
+
+.div2{
+    margin-left: 20%;
+}
+
+.div2 div h3{
+    text-align:right ;
+    margin-right: 50px;
+    font-size: 50px;
+} 
+
+.plmdd{
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+    box-shadow: 2px 2px 12px black;
+    margin-top: 50px;
+}
+
+.plmdd div img {
+    width: 300px;
+    height: 150px;
+    border-radius: 0;
+    object-fit: contain;
+    padding: 20px;
+}
+
+fieldset{
+    width: 900px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+fieldset button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #C0C0C0;
+}
+
+.tipo_produto{
+    width: 900px;
+    text-align: center;
+    margin-left: 20%;
 }

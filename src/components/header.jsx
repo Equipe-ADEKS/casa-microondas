@@ -3,7 +3,7 @@ import ThemeChangerButton from "./theme.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
-import ShopMenuButton from "./shop_menu.jsx"
+import ShopMenuEmpty from "./shop_menu.jsx"
 import AccountLoginButton from "./disconnect_user.jsx"
 import AccountLoggedButton from "./user_login.jsx"
 import AdminLoggedButton from "./admin_logged.jsx"
@@ -29,7 +29,7 @@ function Header () {
 				{/* <ThemeChangerButton /> */}
                 <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
 				<AdminLoggedButton />
-				<ShopMenuButton />   
+				<ShopMenuEmpty />   
 			</div>
 		</div>
 	    </header>

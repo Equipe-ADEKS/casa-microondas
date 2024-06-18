@@ -1,22 +1,49 @@
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
-const handleDragStart = (e) => e.preventDefault();
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import '../assets/css/carousel.css'
 
 const items = [
-    <img className="carouselImages" src="./logos/s1.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="carouselImages" src="./logos/s2.png" onDragStart={handleDragStart} role="presentation" />,
-    <img className="carouselImages" src="./logos/s3.png" onDragStart={handleDragStart} role="presentation" />,
-	<img className="carouselImages" src="./logos/s4.png" onDragStart={handleDragStart} role="presentation" />,
-	<img className="carouselImagesLG" src="./logos/s5.png" onDragStart={handleDragStart} role="presentation" />,
-	<img className="carouselImages" src="./logos/s6.png" onDragStart={handleDragStart} role="presentation" />,
-	<img className="carouselImages" src="./logos/s7.png" onDragStart={handleDragStart} role="presentation" />,
+  "./logos/s1.png",
+  "./logos/s2.png",
+  "./logos/s3.png",
+  "./logos/s4.png",
+  "./logos/s5.png",
+  "./logos/s6.png",
+  "./logos/s7.png",
 ];
 
-const Gallery = () => {
-    return (
-        <AliceCarousel mouseTracking items={items} />
-    )
-}
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 1, 
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 1000,
+};
 
-export default Gallery
+const Gallery = () => {
+  const handleDragStart = (e) => e.preventDefault();
+
+  return (
+    <div className="slider-container">
+      <Slider {...settings}>
+        {items.map((item, index) => (
+          <div key={index} className="carousel-container-img">
+            <img
+              className="carouselImages"
+              src={item}
+              alt={`slide ${index + 1}`}
+              onDragStart={handleDragStart}
+              role="presentation"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default Gallery;

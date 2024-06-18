@@ -17,7 +17,9 @@
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.2",
     "react-sliding-pane": "^7.3.0",
+    "slick-carousel": "^1.8.1",
     "theme-ui": "^0.16.2",
     "web-vitals": "^2.1.4"
   },

@@ -28,7 +28,7 @@ const Contact = () => {
         <Header />
         <main>
 		    <h2>Envie uma mensagem</h2>
-		    <h3>Dúvidas?, Quer fazer um orçamento?, Entre em contato preenchendo esse formulário</h3>
+		    <h3>Dúvidas? Quer fazer um orçamento? Entre em contato preenchendo esse formulário</h3>
 		    <fieldset class="formulario">
 			    <div class="conectar">
 				    <p><label for="nome">Nome de Usuário ou Endereço de Email  *</label></p>
@@ -38,7 +38,7 @@ const Contact = () => {
 				    <p><label for="telephone">Telefone *</label></p>
 				    <input type="tel" id="telephone" name="telephone" />
 				    <p><label for="message">Mensagem *</label></p>
-				    <input class="message" type="text" id="message" name="message" />
+				    <textarea className="message" id="message" name="message" />
 				    <div class="formulario_centro">
 					    <button type="submit">Enviar</button>
 				    </div>

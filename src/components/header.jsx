@@ -26,7 +26,6 @@ function Header () {
 			</nav>
 			<div className="utilidades">
 				{/* <ThemeChangerButton /> */}
-                <button className="botao"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
 				<AdminLoggedButton />
 			</div>
 		</div>

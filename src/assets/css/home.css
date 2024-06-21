@@ -1,17 +1,23 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .msg_bemvindo{
-	margin-left: 150px;
-	padding: 10px 20px;
-	font-size: 32px;
+	margin-left: 9.375rem;
+	padding:  0.625rem 1.25rem;
+	font-size: 2rem;
 }
 
 .navegacao_usuario{
-	width: 700px;
-	padding: 10px 30px;
+	width: 43.75rem;
+	padding: 0.625rem 1.875rem;
     display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 1.25rem;
 	border-top : solid 1px white ;
 	margin: 0 auto;
 }
@@ -19,30 +25,31 @@
 .navegacao_usuario a{
    text-decoration: none;
    color: white;
-   padding: 40px;
+   padding: 2.5rem;
 
 }
 
 .imagem_principal {
-	width: 100%;
+	max-width: 1200px;
+	min-width: 320px;
 	text-align: center;
-	margin-top: 0.938;
-	margin-bottom: 1.25rem;    
+	margin: auto;   
 }
 
-.imagem_principal .imagem_principal_conteudo {
-	width: 86.875rem;
-	border-radius: 8px;    
+.imagem_principal img {
+	width: 100%;
+	border-radius: 8px;   
+	
 }
 
 .carouselImages {
-    width: 600px;
-    height: 200px;
+    width: 37.5rem;
+    height: 12.5rem;
 }
 
 .carouselImagesLG{
-    width: 300px;
-    height: 200px;
+    width: 18.75rem;
+    height: 12.5rem;
 }
 
 
@@ -66,7 +73,7 @@
 }
 
 .shop .shop_content .shop_text h2 {
-	font-size: 24px;
+	font-size: 1.5rem;
 	text-align: center;
 	vertical-align: center;
 }
@@ -81,7 +88,7 @@
 	background-color: var(--cor-secundaria-light);
 	box-shadow: none;
 	border: 2px solid darkblue;
-	padding: 12px;
+	padding: 0.75rem;
 	border-radius: 5px;
 	color: var(--cor-texto-light);
 	cursor: pointer;
@@ -92,17 +99,25 @@
 	text-align: center;
 }
 
+.services{
+	display: flex;
+	margin: 0 auto;
+}
+
 .info{
 	display: flex;
 	justify-content: center;
 	gap: 1.563rem;
-	margin: 1.875rem 1.25rem 1.875rem 1.25rem;
-	padding-top: 70px;
+	margin: 0 auto;
+	padding-top: 4.375rem;
+	max-width: 1400px;
+	min-width: 900px;
 }
 
 .info .info_coluna {
 	display: flex;
 	flex-direction: column;
+	width: 33%;
 }
 
 .info .info_coluna .info_img {
@@ -124,8 +139,14 @@
 	border-radius: 5px;
 }
 
+.author_section{
+	max-width: 1400px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
 .author_section .author {
-	width: 87.5rem;
+	width: 100%;
 	margin: 0 auto;
 	background-color: var(--cor-secundaria-light);
 	padding: 1.875rem 5.625rem;
@@ -155,4 +176,18 @@
 .author_section .author .bio_content {
     display: flex;
     flex-direction: column;
+	
+}
+
+@media (max-width:1350px){
+	.info{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width:900) {
+	.info{
+		margin-right: 100%;
+	}
 }

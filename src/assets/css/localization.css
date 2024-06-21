@@ -1,26 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .title {
     font-family: "Alfa Slab One", serif;
-    font-weight: 400;
-    font-size: 70px;
-    margin-left: 100px;
+    font-size: 4.375rem;
+    margin-left: 6.25rem;
     color: var(--cor-texto-light);
     text-transform: uppercase;
 }
 
 .subtitle {
-    font-size: 20px;
-    margin-left: 130px;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    margin-left: 8.125rem;
+    margin-bottom: 1.875rem;
 }
 
 .banner {
-    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
     text-align: center;
-    margin: 40px 0 50px 0;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5%;
 }
 
 .banner_content {
     border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.try{
+    display: flex;
+    margin-bottom: 50px;
 }
 
 .name_map {
@@ -28,20 +44,23 @@
 }
 
 .map {
-    text-align: center;
-    margin: 20px 0 30px 0;
+    text-align: left;
+    margin-left: 10%;
+    width: 1200px;
 }
 
 .map_content {
-    width: 1200px;
-    height: 600px;
+    min-width: 500px;
+    max-width: 1100px;
+    height: 500px;
 }
 
 .maps_info{
     display: flex;
-    width: 1200px;
-    margin: 0 auto;
+    width: 40%;
+    margin-right: 30%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.321);
+    flex-direction: column;
 }
 
 .maps_info a{
@@ -50,8 +69,8 @@
     color: white;
     text-decoration: none;
     background-color: #2cd46b;
-    height: 20px;
-    padding: 20px;
+    height: 1.25rem;
+    padding: 1.25rem;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -63,7 +82,8 @@
 }
 
 .maps_img img{
-    width: 400px;
+    width: 18rem;
+    height: 18rem;
     border-radius: 20px;
     object-fit: cover;
     padding: 10px;
@@ -74,4 +94,20 @@
     flex-direction: column;
     gap: 10px;
     padding: 8px;
+    text-align: center;
+}
+
+.maps_desc a{
+    margin: auto;
+}
+
+@media (max-width:1200px){
+    .try{
+        flex-direction: column;
+    }.maps_img{
+        flex-direction: column;
+    }.maps_info{
+        align-items: center;
+        margin: auto;
+    }
 }

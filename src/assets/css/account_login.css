@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .minha_conta {
 	text-align: center;
 	vertical-align: center;

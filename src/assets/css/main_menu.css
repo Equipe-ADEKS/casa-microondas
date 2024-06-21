@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .menu_lateral {
 	width: 0px;
 	min-height: 100vh;
@@ -98,3 +104,4 @@
 	color: white;
 	font-size: 16px;
 }
+

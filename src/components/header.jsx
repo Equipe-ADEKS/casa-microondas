@@ -2,19 +2,19 @@ import { Link } from "react-router-dom"
 import ThemeChangerButton from "./theme.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
 import AccountLoginButton from "./disconnect_user.jsx"
 import AccountLoggedButton from "./user_login.jsx"
 import AdminLoggedButton from "./admin_logged.jsx"
 
-library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun)
+library.add( faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun, faBars)
 
 function Header () {
     return (
         <header>
 		<div className="inicio">
 			<div className="inicio_barra">
-                <i id="barra_lateral_esquerdo" className="fa-solid fa-bars"></i>
+				<FontAwesomeIcon className="fa_bars" icon="fa-solid fa-bars" />
                 <Link to="/"><h1 className="nome"><strong>Casa do Microondas</strong></h1></Link>
             </div>
 			<nav className="navegacao">

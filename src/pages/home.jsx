@@ -9,7 +9,7 @@ const Home = () => {
         <Header />
         <main>
 		<div className="imagem_principal">
-			<img className="imagem_principal_conteudo" src="./cabecalho.png" alt=""/>
+			<img className="imagem_principal_content" src="./cabecalho.png" alt=""/>
 		</div>
 		<h2 className="title_carousel">Marcas com que trabalhamos</h2>
 		<Gallery />
@@ -51,24 +51,18 @@ const Home = () => {
 				</div>
 			</div>
 		</section>
-		<section className="info">
-			<div className="info_coluna">
-				<a href="./html/error.html">
-                    <img className="info_img" src="./conserto-microondas.jpg" alt=""/>
-                    <p>Conserto microondas</p>
-                </a>
+		<section className="services">
+			<div className='services_desc'>
+				<img src="./conserto-microondas.jpg" alt="" />
+				<p>Conserto microondas</p>
 			</div>
-			<div className="info_coluna">
-				<a href="./html/error.html">
-                    <img className="info_img" src="./conserto-forno-eletrico.jpg" alt=""/>
-                    <p>Conserto forno-eletrico</p>
-                </a>
+			<div className='service_desc'> 
+				<img src="./conserto-forno-eletrico.jpg" alt="" />
+				<p>Conserto Forno Elétrico</p>
 			</div>
-			<div className="info_coluna">
-				<a href="./html/error.html">
-                    <img className="info_img" src="./refora-microondas.jpg" alt=""/>
-                    <p>Reforma microondas</p>
-                </a>
+			<div className='service_desc'>
+				<img src="./refora-microondas.jpg" alt="" />
+				<p>Reforma Microondas</p>
 			</div>
 		</section>
 		<section className="author_section">

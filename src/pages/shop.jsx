@@ -6,118 +6,46 @@ const Shop = () => {
     return (
         <>
         <Header />
-        <main className='kfvbhs'>
-            <section className="shop">
-                <div className="shop_content">
-                    <img src="./shop/shop_cadeira.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Cadeira de jantar formada</h2>
-                        <p>R$ 268,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
+        <main className='main_shop'>
+            <section className="shopping">
+               <div className='products'> 
+                    <div className="product_content">
+                        <img src="data:image/jpeg;base64,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" alt=""/>
+                        <div className="product_text">
+                            <span>Mais Vendidos</span>
+                            <h2>Cadeira de jantar formada</h2>
+                            <p>R$ 268,00</p>
+                            
+                        </div>
+                    </div>
+                    <div className="product_content">
+                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRUpgkxbe-aQ7-KEKCRmcVyqPPy8ACnB3pXUpKmQnLWGlwSiWIIZKxqNer8PXFik3xK0TwsTGazYJkQmogMa0NPT8V2SqQ1xpYMTDpNJCEXBUVsKGWaQak3ZzBXWHmYePXNt0MZw&usqp=CAc" alt=""/>
+                        <div className="product_text">
+                            <span>Mais Vendidos</span>
+                            <h2>Ampulheta de Areia Clarevelas</h2>
+                            <p>R$ 18,00</p>
+                            
+                        </div>
                     </div>
                 </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_ampulheta.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Ampulheta de Areia Clarevelas</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                <div className='products'>
+                    <div className="product_content">
+                        <img src="data:image/jpeg;base64,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" alt=""/>
+                        <div className="product_text">
+                            <span>Mais Vendidos</span>
+                            <h2>Candeeiro pendente intemporal</h2>
+                            <p>R$ 18,00</p>
+                            
+                        </div>
                     </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_lampada.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Candeeiro pendente intemporal</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_quadro.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Arte de folhas emolduradas</h2>
-                        <p>R$ 36,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-            </section>
-            <section className="shop">
-                <div className="shop_content">
-                    <img src="./shop/shop_cadeira.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Cadeira de jantar formada</h2>
-                        <p>R$ 268,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_ampulheta.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Ampulheta de Areia Clarevelas</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_lampada.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Candeeiro pendente intemporal</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_quadro.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Arte de folhas emolduradas</h2>
-                        <p>R$ 36,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-            </section>
-            <section className="shop">
-                <div className="shop_content">
-                    <img src="./shop/shop_cadeira.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Cadeira de jantar formada</h2>
-                        <p>R$ 268,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_ampulheta.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Ampulheta de Areia Clarevelas</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_lampada.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Candeeiro pendente intemporal</h2>
-                        <p>R$ 18,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
-                    </div>
-                </div>
-                <div className="shop_content">
-                    <img src="./shop/shop_quadro.jpg" alt=""/>
-                    <div className="shop_text">
-                        <span>Mais Vendidos</span>
-                        <h2>Arte de folhas emolduradas</h2>
-                        <p>R$ 36,00</p>
-                        <div className="ret"><button type="submit">Adicionar ao carrinho</button></div>
+                    <div className="product_content">
+                        <img src="data:image/jpeg;base64,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" alt=""/>
+                        <div className="product_text">
+                            <span>Mais Vendidos</span>
+                            <h2>Arte de folhas emolduradas</h2>
+                            <p>R$ 36,00</p>
+                            
+                        </div>
                     </div>
                 </div>
             </section>

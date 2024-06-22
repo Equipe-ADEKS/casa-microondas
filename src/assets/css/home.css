@@ -1,5 +1,8 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
 
+body{
+	width: 100%;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -42,8 +45,13 @@
 	
 }
 
+.title_carousel{
+	text-align: center;
+	font-size: 24px;
+}
+
 .carouselImages {
-    width: 37.5rem;
+    width: 36.5rem;
     height: 12.5rem;
 }
 
@@ -101,43 +109,23 @@
 
 .services{
 	display: flex;
-	margin: 0 auto;
+	margin: 50px auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
-.info{
-	display: flex;
-	justify-content: center;
-	gap: 1.563rem;
-	margin: 0 auto;
-	padding-top: 4.375rem;
-	max-width: 1400px;
-	min-width: 900px;
-}
-
-.info .info_coluna {
+.services_desc{
 	display: flex;
 	flex-direction: column;
-	width: 33%;
 }
 
-.info .info_coluna .info_img {
-	width: 28.125rem;
+.services_desc img{
+	width: 400px;
+	height: 400px;
 	object-fit: cover;
-	height: 28.125rem;
-	border-radius: 8px;
+	border-radius: 12px;
 }
 
-.info .info_coluna a {
-	text-decoration: none;
-	color: var(--cor-texto-light);
-}
-
-.info .info_coluna a p{
-	background-color: var(--cor-secundaria-light);
-	padding: 10px;
-	margin-top: -5px;
-	border-radius: 5px;
-}
 
 .author_section{
 	max-width: 1400px;
@@ -164,13 +152,12 @@
 .author_section .author .bio {
 	display: flex;
 	align-items: center;
-	gap: 1.875rem;
+	gap: 2rem;
 	font-size: 1rem;
 }
 
 .author_section .author .bio img {
-	border-radius: 50%;
-	width: 4.375rem;
+	width: 150px;
 }
 
 .author_section .author .bio_content {

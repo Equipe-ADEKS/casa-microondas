@@ -4,67 +4,46 @@
 	box-sizing: border-box;
 }
 
-.minha_conta {
+.minha_conta{
 	text-align: center;
-	vertical-align: center;
-	position: relative;
-	top: 10.625rem;
-	font-size: 2.5rem;
-	padding-bottom: 1.25rem;
 }
 
-.formulario {
+.main_user{
 	display: flex;
-	text-decoration: none;
-	width: 81.25rem;
-	margin: 0 auto;
-	justify-content: space-between;
-	gap: 1.25rem;
-	border: none;
-	height: 100vh;
-	align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #f1f1f1;
 }
 
-.formulario h3 {
-	font-size: 1.875rem;
-}
-
-.formulario input {
-	border: none;
-	background-color: #343842;
-	border-radius: 0.625rem;
-	width: 31.25rem;
-	height: 1.875rem;
-	font-size: 1.25rem;
-	color: white;
-}
-
-.formulario input:focus {
-	outline: none;
-}
-
-.formulario button {
-	width: 9.375rem;
-	font-size: 1.25rem;
-	padding: 0.625rem 1.25rem;
-	border-radius: 1.25rem;
-	border: none;
-	cursor: pointer;
-}
-
-.formulario .conectar {
+.form_user{
+	background-color: white;
+	padding: 10%;
+	width: 700px;
+	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	gap: 0.625rem;
-	padding: 1.875rem;
-	border-right: solid 1px white;    
+	box-shadow: 0.5px 0.5px 5px black;
 }
 
-.formulario .registrar {
+.formulario{
+	border: none;
+}
+
+.formulario div{
 	display: flex;
-	flex-direction: column;
-	width: 50%;
-	gap: 0.625rem;
-	padding: 1.875rem;
+	flex-direction: column-reverse;
+	margin: 12px 0;
+}
+
+.formulario input{
+	width: 100%;
+	height: 30px;
+	border-radius: 12px;
+	border: none;
+	background-color: #f1f1f1;
+	padding-left: 5px;
+	font-size: 16px;
 }

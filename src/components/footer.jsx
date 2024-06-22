@@ -20,9 +20,11 @@ function Footer () {
 			</div>
 			<div className="footer_links">
 				<div className="links_rapidos">
-					<p>Links Rápidos</p>
-					<li><Link to="/account_login">Minha conta</Link></li>
-					<li><Link to="/contacts">Contate-nos</Link></li>
+					<p><b>Horários de atendimento</b></p>
+					<li className="days">Segunda a Sexta</li>
+					<li>08h30 até às 17h30</li>
+					<li className="days">Sábado</li>
+					<li>09h até às 13h</li>
 				</div>
 			</div>
 		</div>
@@ -32,7 +34,7 @@ function Footer () {
 			</div>
 			<p>© 2024 Casa do Microondas. Todos os direitos reservados.</p>
 		</div>
-	    </footer>
+		</footer>
     )
 }
 

@@ -45,6 +45,18 @@ const Contact = () => {
 				<p>Se quiser fazer um pré-orçamento preencha o formulário abaixo:</p>
 				<fieldset>
 					<div>
+						<input type="text" id="username" name="username"/>
+						<label htmlFor="username">Digite seu nome: </label>
+					</div>
+					<div>
+						<input type="tel" id="telephone" name="telephone"/>
+						<label htmlFor="telephone">Digite seu telefone: *</label>
+					</div>
+					<div>
+						<input type="email" id="email" name="email" />
+						<label htmlFor="email">Digite seu E-mail: *</label>
+					</div>
+					<div>
 						<input type="radio" value='microondas' id="t_produto" name="t_produto"	/>Microondas
 						<input type="radio" value='forno_eletrico' id="t_produto" name="t_produto" />Forno Elétrico
 						<label htmlFor="t_produto">Escolha o tipo de produto:</label>
@@ -54,19 +66,8 @@ const Contact = () => {
 						<label htmlFor="model">Se souber digite o modelo do seu produto:</label>
 					</div>
 					<div>
-						<input type="email" id="email" name="email" />
-						<label htmlFor="email">Digite seu E-mail: *</label>
-					</div>
-					<div>
-						<input type="tel" id="telephone" name="telephone"/>
-						<label htmlFor="telephone">Digite seu telefone: *</label>
-					</div>
-					<div>
-						<input type="radio" id="service" name="service" />Outro 
-						<input type="radio" id="service" name="service" />Conserto
-						<input type="radio" id="service" name="service"/>Limpeza
-						<input type="radio" id="service" name="service" />Reforma
-						<label htmlFor="service">Escolha o tipo de serviço que você precisa:</label>
+						<input type="text" id="service" name="service" />
+						<label htmlFor="service">Descreva o tipo de serviço que você precisa:</label>
 					</div>
 					<div>
 						<input type="text" id="os" name="os" />

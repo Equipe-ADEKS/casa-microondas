@@ -9,8 +9,8 @@ function Admin_Order() {
     return (
         <>
         <main>
-            <section className='main_service'>
-                <h2 className='tittle_service'>Serviços</h2>
+            <section className='main_orders'>
+                <h2 className='tittle_orders'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
                         <span>id</span>

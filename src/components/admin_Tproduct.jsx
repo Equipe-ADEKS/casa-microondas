@@ -9,15 +9,19 @@ function Admin_Tproduct () {
     return (
         <>
         <main>
-            <section className='main_service'>
-                <h2 className='tittle_service'>Serviços</h2>
+            <section className='main_tproduct'>
+                <h2 className='tittle_tproduct'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
-                        <span>id</span>
+                        <span>id_tipo</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>
-                        <span>Nome</span>
+                        <span>Descrição_tipo</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Ativo</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>

@@ -9,16 +9,36 @@ function Admin_Contact () {
     return (
         <>
         <main>
-            <section className='main_service'>
-                <h2 className='tittle_service'>Serviços</h2>
+            <section className='main_contact'>
+                <h2 className='tittle_contact'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
-                        <span>id</span>
+                        <span>id_contanto</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>
-                        <span>Nome</span>
+                        <span>id_cliente</span>
                         <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Assunto</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Mensagem</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Data contato</span>
+                        <input type="date" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Resposta</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Data resposta</span>
+                        <input type="date" />
                     </div>
                     <div className='input_form'>
                         <span>Opções</span>

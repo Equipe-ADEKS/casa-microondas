@@ -9,16 +9,28 @@ function Admin_Brand () {
     return (
         <>
         <main>
-            <section className='main_service'>
-                <h2 className='tittle_service'>Serviços</h2>
+            <section className='main_brand'>
+                <h2 className='tittle_brand'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
-                        <span>id</span>
+                        <span>id_marca</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>
-                        <span>Nome</span>
+                        <span>Descrição_marca</span>
                         <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Logo_marca</span>
+                        <input type="url" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Url_marca</span>
+                        <input type="url" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Ativo</span>
+                        <input type="number" />
                     </div>
                     <div className='input_form'>
                         <span>Opções</span>

@@ -13,11 +13,31 @@ function Admin_Service () {
                 <h2 className='tittle_service'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
-                        <span>id</span>
+                        <span>id_serviço</span>
+                        <input type="number" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Titulo_serviço</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>
-                        <span>Nome</span>
+                        <span>Descrição_serviço</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Imagem_serviço</span>
+                        <input type="url" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Ordem apresentação</span>
+                        <input type="number" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Url_serviço</span>
+                        <input type="url" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Ativo</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>

@@ -9,15 +9,19 @@ function Admin_Branch () {
     return (
         <>
         <main>
-            <section className='main_service'>
-                <h2 className='tittle_service'>Serviços</h2>
+            <section className='main_branch'>
+                <h2 className='tittle_branch'>Serviços</h2>
                 <div className='table'>
                     <div className='input_form'>
-                        <span>id</span>
+                        <span>id_filial</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>
-                        <span>Nome</span>
+                        <span>Endereço_filial</span>
+                        <input type="text" />
+                    </div>
+                    <div className='input_form'>
+                        <span>Url do mapa</span>
                         <input type="text" />
                     </div>
                     <div className='input_form'>

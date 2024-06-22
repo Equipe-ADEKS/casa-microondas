@@ -6,7 +6,12 @@ const Shop = () => {
     return (
         <>
         <Header />
-        <main className='main_shop'>
+        <main >
+            <div className='tittle_shop'> 
+                <h2>Vendas</h2>
+                <p>Aqui você pode ver os nossos produtos</p>
+            </div>
+            <section  className='main_shop'>
             <section className="shopping">
                <div className='products'> 
                     <div className="product_content">
@@ -48,6 +53,7 @@ const Shop = () => {
                         </div>
                     </div>
                 </div>
+            </section>
             </section>
         </main>
         <Footer />

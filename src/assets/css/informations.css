@@ -6,11 +6,13 @@
 
 .title {
     font-family: "Alfa Slab One", serif;
-    font-weight: 400;
     font-size: 70px;
-    margin-left: 100px;
+    margin-left: 10%;
     color: var(--cor-texto-light);
     text-transform: uppercase;
+    max-width: 1400px;
+    min-width: 320px;
+    margin-right: 10%;
 }
 
 .subtitle {

@@ -16,8 +16,10 @@ const Localization = () =>
         <div className="banner">
             <img className="banner_content" src="./banner/banner-microondas1.png" alt=""/>
         </div>
-        <h1 className="title">localização</h1>
-        <p className="subtitle">Confira a Casa do Microondas mais próxima de você</p>
+        <div className="title_localization">
+            <h1 >localização</h1>
+            <p>Confira a Casa do Microondas mais próxima de você</p>
+        </div>
         <h2 className="name_map">Avenida Presidente Kennedy 410, Rebouças - Curitiba</h2>
         <section className='try'>
             

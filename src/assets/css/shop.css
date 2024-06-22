@@ -4,10 +4,23 @@
 	box-sizing: border-box;
 }
 
+.tittle_shop{
+    text-align: center;
+}
+
+.tittle_shop h2{
+    font-size: 64px;
+}
+
+.tittle_shop p {
+    font-size: 32px;
+}
+
 .main_shop{
     display: flex;
     margin-left: 7%;
     align-items: center;
+    min-height: 100vh;
 }
 
 .shopping{

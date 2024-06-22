@@ -10,7 +10,7 @@ function Admin_Contact () {
         <>
         <main>
             <section className='main_contact'>
-                <h2 className='tittle_contact'>Serviços</h2>
+                <h2 className='tittle_contact'>Contatos</h2>
                 <div className='table'>
                     <div className='input_form'>
                         <span>id_contanto</span>

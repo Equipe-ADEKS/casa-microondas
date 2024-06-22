@@ -10,7 +10,7 @@ function Admin_Tproduct () {
         <>
         <main>
             <section className='main_tproduct'>
-                <h2 className='tittle_tproduct'>Serviços</h2>
+                <h2 className='tittle_tproduct'>Tipo de produto</h2>
                 <div className='table'>
                     <div className='input_form'>
                         <span>id_tipo</span>

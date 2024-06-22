@@ -10,7 +10,7 @@ function Admin_Branch () {
         <>
         <main>
             <section className='main_branch'>
-                <h2 className='tittle_branch'>Serviços</h2>
+                <h2 className='tittle_branch'>Filiais</h2>
                 <div className='table'>
                     <div className='input_form'>
                         <span>id_filial</span>

@@ -17,8 +17,14 @@ function Admin_Panel () {
                     <p>Administrador</p>
                 </div>
             </div>
-            <Admin_Menu />
-            <Outlet />
+            <div className="container">
+                <div className="admin_menu">
+                    <Admin_Menu />
+                </div>
+                <div className="outlet">
+                    <Outlet />
+                </div>
+            </div>
         </section>
     )
 }

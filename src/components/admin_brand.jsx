@@ -10,7 +10,7 @@ function Admin_Brand () {
         <>
         <main>
             <section className='main_brand'>
-                <h2 className='tittle_brand'>Serviços</h2>
+                <h2 className='tittle_brand'>Marcas</h2>
                 <div className='table'>
                     <div className='input_form'>
                         <span>id_marca</span>

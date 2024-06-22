@@ -28,9 +28,19 @@
 }
 
 .menu_bar div{
+    width: 220px;
     display: flex;
     align-items: center;
     border-bottom:  solid 1px rgba(154, 148, 148, 0.588);
+}
+
+.container {
+    display: flex;
+}
+
+.outlet {
+    padding-top: 0px;
+    padding-left: 10px;
 }
 
 @media (max-width:950px){

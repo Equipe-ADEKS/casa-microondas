@@ -34,4 +34,4 @@ function Admin_Branch () {
     )
 }
 
-export default Admin_Branchi
+export default Admin_Branch

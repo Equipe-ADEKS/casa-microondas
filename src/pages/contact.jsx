@@ -47,7 +47,7 @@ const Contact = () => {
 					<div>
 						<input type="radio" value='microondas' id="t_produto" name="t_produto"	/>Microondas
 						<input type="radio" value='forno_eletrico' id="t_produto" name="t_produto" />Forno Elétrico
-						<label htmlFor="t_produto">Escolha o tipo de produto</label>
+						<label htmlFor="t_produto">Escolha o tipo de produto:</label>
 					</div>
 					<div>
 						<input type="text" id="model" name="model" />

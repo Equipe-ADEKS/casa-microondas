@@ -32,3 +32,15 @@
     align-items: center;
     border-bottom:  solid 1px rgba(154, 148, 148, 0.588);
 }
+
+@media (max-width:950px){
+    .menu_bar div p{
+        display: none;
+    }.user_icon div{
+        display: none;
+    }.user_bar{
+        width: 5%;
+    }.icon{
+        display: none;
+    }
+}

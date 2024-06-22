@@ -26,24 +26,55 @@ const Contact = () => {
 	return (
         <>
         <Header />
-        <main>
-		    <h2>Envie uma mensagem</h2>
-		    <h3>Dúvidas? Quer fazer um orçamento? Entre em contato preenchendo esse formulário</h3>
-		    <fieldset class="formulario">
-			    <div class="conectar">
-				    <p><label for="nome">Nome de Usuário ou Endereço de Email  *</label></p>
-				    <input type="text" id="nome" name="nome" />
-				    <p><label for="subject">Assunto *</label></p>
-				    <input type="text" id="subjet" name="subject" />
-				    <p><label for="telephone">Telefone *</label></p>
-				    <input type="tel" id="telephone" name="telephone" />
-				    <p><label for="message">Mensagem *</label></p>
-				    <textarea className="message" id="message" name="message" />
-				    <div class="formulario_centro">
-					    <button type="submit">Enviar</button>
-				    </div>
-			    </div>
-            </fieldset> 
+        <main className="contact">
+			<section className="form_contact">
+				<p>Se tiver uma duvida ou sugestão preencha o formulário abaixo:</p>
+				<fieldset>
+					<div>
+						<input type="text" id="assunto" name="assunto" />
+						<label htmlFor="assunto">Assunto: *</label>
+					</div>
+					<div>
+						<input type="text" id="mensagem" name="mensagem"/>
+						<label htmlFor="mensagem">Mensagem: *</label>
+					</div>
+					<button type="submit" id="btn_cont">Enviar</button>
+				</fieldset>
+			</section>
+			<section className="form_contact">
+				<p>Se quiser fazer um pré-orçamento preencha o formulário abaixo:</p>
+				<fieldset>
+					<div>
+						<input type="radio" value='microondas' id="t_produto" name="t_produto"	/>Microondas
+						<input type="radio" value='forno_eletrico' id="t_produto" name="t_produto" />Forno Elétrico
+						<label htmlFor="t_produto">Escolha o tipo de produto</label>
+					</div>
+					<div>
+						<input type="text" id="model" name="model" />
+						<label htmlFor="model">Se souber digite o modelo do seu produto:</label>
+					</div>
+					<div>
+						<input type="email" id="email" name="email" />
+						<label htmlFor="email">Digite seu E-mail: *</label>
+					</div>
+					<div>
+						<input type="tel" id="telephone" name="telephone"/>
+						<label htmlFor="telephone">Digite seu telefone: *</label>
+					</div>
+					<div>
+						<input type="radio" id="service" name="service" />Outro 
+						<input type="radio" id="service" name="service" />Conserto
+						<input type="radio" id="service" name="service"/>Limpeza
+						<input type="radio" id="service" name="service" />Reforma
+						<label htmlFor="service">Escolha o tipo de serviço que você precisa:</label>
+					</div>
+					<div>
+						<input type="text" id="os" name="os" />
+						<label htmlFor="os">Escreva brevemente o motivo do seu orçamento:</label>
+					</div>
+					<button type="submit" id="btn_os">Enviar</button>
+				</fieldset>
+			</section>
 	    </main>
         <Footer />
         </>

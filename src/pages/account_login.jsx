@@ -7,29 +7,37 @@ const Account_Login = () => {
         <>
         <Header />
         <main>
-            <h2 class="minha_conta">Minha Conta</h2>
-            <fieldset class="formulario">
-                <div class="conectar">
-                    <h3>Conecte-se</h3>
-                    <label for="nome">Nome de Usuário ou Endereço de Email  *</label>
-                    <input type="text" id="nome" name="nome" />
-                    <label for="senha">Senha *</label>
-		            <input type="password" id="senha" name="senha" />
-		        <div class="formulario_centro">
-                    <button type="submit">Conecte-se</button>
-                </div>
-                </div>
-                <div class="registrar">
-                    <h3>Registro</h3>
-                    <label for="email">Endereço de email  *</label>
-                    <input type="email" id="email" name="email" />
-                    <p>Um link para definir uma nova senha será enviado para seu endereço de e-mail.</p>
-                    <p>Os seus dados pessoais serão utilizados para apoiar a sua experiência neste website, para gerir o acesso à sua conta e para outros fins descritos na nossa política de privacidade .</p>
-                    <div class="formulario_centro">
-                        <button type="submit">Registro</button>
-                    </div>
-                </div>
-            </fieldset>
+            <h1 class="minha_conta">Minha Conta</h1>
+            <section className='main_user'>
+                <section className='form_user'>
+                    <h2>Conectar-se</h2>
+                    <fieldset class="formulario">
+                        <div>
+                            <input type="text" id='user' name='user'/>
+                            <label htmlFor="user">Nome de Usuário ou Endereço de Email  *</label>
+                        </div>
+                        <div>
+                            <input type="password" id='password_user' name='password_user'/>
+                            <label htmlFor="password_user">Senha  *</label>
+                        </div>
+                        <button type="submit">Conectar</button>
+                    </fieldset>
+                </section>
+                <section className='form_user'>
+                    <h2>Registrar-se</h2>
+                    <fieldset className='formulario'>
+                        <div>
+                            <input type="text"id='new_user' name='new_user' />
+                            <label htmlFor="new_user">Endereço de email  *</label>
+                        </div>
+                        <div>
+                            <input type="password" id='password_newuser' name='password_newuser' />
+                            <label htmlFor="password_newuser">Senha  *</label>
+                        </div>
+                        <button>Registrar</button>
+                    </fieldset>    
+                </section>
+            </section>
         </main>
         <Footer />
         </>
@@ -37,3 +45,4 @@ const Account_Login = () => {
 }
 
 export default Account_Login
+

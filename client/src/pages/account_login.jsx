@@ -6,33 +6,20 @@ import API from '../api/api.js'
 
 const Account_Login = () => {
 
-    const [usernameReg, setUsernameReg] = useState('')
-    const [emailReg, setEmailReg] = useState('')
-    const [passwordReg, setPasswordReg] = useState('')
-    const [usernameLog, setUsernameLog] = useState('')
-    const [emailLog, setEmailLog] = useState('')
-    const [passwordLog, setPasswordLog] = useState('')
+    const[usu, setUsu] = useState('')
+    const[email, setEmail] = useState('')
+    const[sen, setSen] = useState('')
 
-    const [loginStatus, setLoginStatus] = useState('')
+    const postCadastro = () => {
+        API.post('/login', {
+            usu,
+            email,
+            sen,
+        }).then(() => {
+			alert('Serviço gravado com sucesso');
+		})
+    }
 
-    const registrar = async () => {
-        try {
-            const res = await API({
-                method: 'POST',
-                url: '/login',
-                data: {
-                    username: usernameReg,
-                    email: emailReg, require,
-                    password: passwordReg, require,
-                },
-            });
-        }
-
-        console.log(res.data);
-        if (res.data.status === 'successo') console.log('Registrado com sucesso');
-        }   catch (err) {
-            console.log(`⛔⛔⛔: ${err.response.data.message}`);
-        }
 
     return (
         <>
@@ -58,18 +45,18 @@ const Account_Login = () => {
                         <h2>Registrar-se</h2>
                         <fieldset className='formulario'>
                             <div>
-                                <input type="text" id='new_user' name='new_user' />
+                                <input type="text" id='new_user' name='new_user' onChange={(e) => setUsu(e.target.value)}/>
                                 <label htmlFor="new_user">Nome de usuário (Opcional)</label>
                             </div>
                             <div>
-                                <input type="text" id='new_user' name='new_user' />
+                                <input type="email" id='new_user' name='new_user' onChange={(e) => setEmail(e.target.value)}/>
                                 <label htmlFor="new_user">Endereço de email  *</label>
                             </div>
                             <div>
-                                <input type="password" id='password_newuser' name='password_newuser' />
+                                <input type="password" id='password_newuser' name='password_newuser' onChange={(e) => setSen(e.target.value)}/>
                                 <label htmlFor="password_newuser">Senha  *</label>
                             </div>
-                            <button>Registrar</button>
+                            <button onClick={postCadastro}>Registrar</button>
                         </fieldset>
                     </section>
                 </section>

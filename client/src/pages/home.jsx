@@ -42,7 +42,7 @@ const Home = () => {
 		</section>
 		<section className="services">
 			<div className='services_desc'>
-				<img src="./Busca-e-entrega.jpg" alt="" />
+				<img src="./busca-e-entrega.jpg" alt="" />
 				<p>Busca e entrega</p>
 			</div>
 			<div className='services_desc'> 

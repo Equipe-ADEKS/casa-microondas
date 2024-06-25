@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from "./pages/home.jsx"
 import Localization from "./pages/localization.jsx"
@@ -15,6 +15,12 @@ import Admin_Order from './components/admin_orders.jsx'
 import Admin_Tproduct from './components/admin_Tproduct.jsx'
 import Admin_Contact from './components/admin_contact.jsx'
 import Error from './pages/error.jsx'
+
+const Private = ({ Item }) => {
+    const signed = false;
+
+    return signed > 0 ? <Item /> : <Account_Login />
+}
 
 
 const MyRoutes = () => {

@@ -47,25 +47,29 @@ function Admin_Order() {
     return (
         <>
             <main>
-                <section className='main_orders'>
-                    <h2 className='tittle_orders'>Chamados</h2>
-                    <div className='table'>
-                        <div className='input_form'>
-                            <span>id</span>
-                            <input type="text" />
-                        </div>
-                        <div className='input_form'>
-                            <span>Nome</span>
-                            <input type="text" />
-                        </div>
-                        <div className='input_form'>
-                            <span>Opções</span>
-                            <div className='options'>
-                                <button><FontAwesomeIcon icon="fa-solid fa-pencil" /></button>
-                                <button onClick={onDelete()}><FontAwesomeIcon icon="fa-solid fa-trash-can" /></button>
-                            </div>
-                        </div>
-                    </div>
+                <section>
+                    <ul>
+                        <li>Id_chamado</li>
+                        <li>Nome</li>
+                        <li>Telefone</li>
+                        <li>E-mail</li>
+                        <li>Tipo de Produto</li>
+                        <li>Modelo</li>
+                        <li>Tipo Servico</li>
+                        <li>Problema</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </section>
             </main>
         </>

@@ -138,7 +138,7 @@ app.get("/marca", (req, resp) => {
     conexao.query(`SELECT id_marca,
         desc_marca,
         ativo
-    FROM Marca WHERE ativo = 1`)
+    FROM Marca `)
         .then(resut => resp.json(resut.recordset))
         .catch(err => resp.json(err));
 
@@ -374,10 +374,10 @@ app.get("/servico/:id", (req, res) => {
 
 // GET PARA O SITE
 app.get("/servicos", (req, resp) => {
-    conexao.query(`SELECT id_servico
-        titulo_servico
-        desc_servico
-        url_servico
+    conexao.query(`SELECT id_servico,
+        titulo_servico,
+        desc_servico,
+        url_servico,
         ordem_apresentacao,
         ativo
     FROM servico WHERE ativo = 1
@@ -389,14 +389,14 @@ app.get("/servicos", (req, resp) => {
 
 // GET PARA O ADMINISTRADOR
 app.get("/servico", (req, res) => {
-    conexao.query(`SELECT id_servico
-                    titulo_servico
-                    desc_servico
-                    url_servico
+    conexao.query(`SELECT id_servico,
+                    titulo_servico,
+                    desc_servico,
+                    url_servico,
                     ordem_apresentacao,
                     ativo
                 FROM servico 
-                ORDEM BY ORDEM_APRESENTACAO`)
+                ORDER BY ORDEM_APRESENTACAO`)
         .then(resut => res.json(resut.recordset))
         .catch(err => res.json(err))
 });

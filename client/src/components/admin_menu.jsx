@@ -20,11 +20,6 @@ function Admin_Menu () {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/admin/branch">
-                        <p><FontAwesomeIcon icon="fa-solid fa-building" />Filiais</p>
-                    </Link>
-                </div>
-                <div>
                     <Link to="/admin/order">
                     <p><FontAwesomeIcon icon="fa-solid fa-paper-plane" />Chamados</p>
                     </Link>

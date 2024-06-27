@@ -360,10 +360,10 @@ app.put('/servicos', (req, res) => {
 // GET PARA O FORMULARIO
 app.get("/servico/:id", (req, res) => {
     let id_servico = req.params.id;
-    conexao.query(`SELECT id_servico
-                    titulo_servico
-                    desc_servico
-                    url_servico
+    conexao.query(`SELECT id_servico,
+                    titulo_servico,
+                    desc_servico,
+                    url_servico,
                     ordem_apresentacao,
                     ativo
                 FROM servico WHERE id_servico = ${id_servico}`)

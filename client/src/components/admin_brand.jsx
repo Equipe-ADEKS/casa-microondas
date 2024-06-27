@@ -33,18 +33,25 @@ function Admin_Brand() {
     }
   
     const onDelete = (id) => {
-      if (window.confirm('Tem certeza de excluir essa marca do site?')) {
-        API.delete(`/servicos/${id}`)
-        .then(() => {
-            getData();
-        })}
-    }
-  
+        if (window.confirm('Tem certeza de excluir essa marca do site?')) {
+            console.log(`Deletando marca com ID: ${id}`);
+            API.delete(`/marca/${id}`)
+                .then(() => {
+                    console.log(`Marca com ID: ${id} deletado com sucesso`);
+                    getData();
+                })
+                .catch(error => {
+                    console.error("Ocorreu um erro ao excluir a marca", error);
+                });
+            }
+        };
     return (
         <div>
-            <Button>
-              Novo
-            </Button>
+            <Link to='/admin/brandpost'>
+                <Button>
+                    Novo
+                </Button>
+            </Link>
             <h1>Cadastro de Marcas</h1>
             <Table singleLine>
                 <Table.Header>
@@ -64,13 +71,13 @@ function Admin_Brand() {
                                 <Table.Cell>{data.id_marca}</Table.Cell>
                                 <Table.Cell>{data.desc_marca}</Table.Cell>
                                 <Table.Cell>{data.ativo ? 'Ativo' : 'Desativado'}</Table.Cell>
-                                <Link to='/update'>
+                                <Link to='/admin/brandupdate'>
                                     <Table.Cell> 
                                         <Button onClick={() => setData(data)}>Alterar</Button>
                                     </Table.Cell>
                                 </Link>
                                 <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Desativar</Button>
+                                    <Button onClick={() => onDelete(data.id_marca)}>Desativar</Button>
                                 </Table.Cell>
                             </Table.Row>
                         )

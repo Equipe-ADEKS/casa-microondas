@@ -2,49 +2,64 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import api from '../api/api';
-import '../assets/css/admin_pages.css'
+import '../assets/css/admin_pages.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFlag, faScrewdriverWrench, faUser , faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faFlag, faScrewdriverWrench, faUser, faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
-library.add( faUser, faFlag, faScrewdriverWrench , faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan)
+library.add(faUser, faFlag, faScrewdriverWrench, faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan);
 
 function Admin_Tproduct() {
     const [APIData, setAPIData] = useState([]);
+
     useEffect(() => {
         api.get(`/tipoProduto`)
             .then((response) => {
                 setAPIData(response.data);
             })
+            .catch(error => {
+                console.error("Houve um erro ao buscar os dados!", error);
+            });
     }, []);
-  
+
     const setData = (data) => {
-        let { id_tipo,desc_tipo,ativo } = data;
+        const { id_tipo, desc_tipo, ativo } = data;
         localStorage.setItem('ID', id_tipo);
         localStorage.setItem('Desc', desc_tipo);
-        localStorage.setItem('Checkbox Value', ativo)
+        localStorage.setItem('Checkbox Value', ativo);
     }
-  
+
     const getData = () => {
         api.get(`/tipoProduto`)
-            .then((getData) => {
-                setAPIData(getData.data);
+            .then((response) => {
+                setAPIData(response.data);
             })
+            .catch(error => {
+                console.error("Houve um erro ao buscar os dados!", error);
+            });
     }
-  
+
     const onDelete = (id) => {
-      if (window.confirm('Tem certeza de excluir esse serviço do site?')) {
-        api.delete(`/tipoProduto/${id}`)
-        .then(() => {
-            getData();
-        })}
+        if (window.confirm('Tem certeza de excluir esse serviço do site?')) {
+            console.log(`Deletando tipo de produto com ID: ${id}`);
+            api.delete(`/tipoProduto/${id}`)
+                .then(() => {
+                    console.log(`Tipo de produto com ID: ${id} deletado com sucesso`);
+                    getData();
+                })
+                .catch(error => {
+                    console.error("Houve um erro ao deletar o tipo de produto!", error);
+                });
+        }
     }
-  
+
     return (
         <div>
-            <Button>
-              Novo
-            </Button>
+            <Link to='/admin/tproductpost'>
+                <Button>
+                    Novo
+                </Button>
+            </Link>
             <h1>Cadastro de Tipos de Produto</h1>
             <Table singleLine>
                 <Table.Header>
@@ -56,29 +71,27 @@ function Admin_Tproduct() {
                         <Table.HeaderCell>Desativar</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
-  
+
                 <Table.Body>
-                    {APIData.map( (data) => {
-                        return (
-                            <Table.Row>
-                                <Table.Cell>{data.id_tipo}</Table.Cell>
-                                <Table.Cell>{data.desc_tipo}</Table.Cell>
-                                <Table.Cell>{data.ativo ? 'Ativo' : 'Desativado'}</Table.Cell>
-                                <Link to='/update'>
-                                    <Table.Cell> 
-                                        <Button onClick={() => setData(data)}>Alterar</Button>
-                                    </Table.Cell>
+                    {APIData.map((data) => (
+                        <Table.Row key={data.id_tipo}>
+                            <Table.Cell>{data.id_tipo}</Table.Cell>
+                            <Table.Cell>{data.desc_tipo}</Table.Cell>
+                            <Table.Cell>{data.ativo ? 'Ativo' : 'Desativado'}</Table.Cell>
+                            <Table.Cell>
+                                <Link to='/admin/tproductupdate'>
+                                    <Button onClick={() => setData(data)}>Alterar</Button>
                                 </Link>
-                                <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Desativar</Button>
-                                </Table.Cell>
-                            </Table.Row>
-                        )
-                    })}
+                            </Table.Cell>
+                            <Table.Cell>
+                                <Button onClick={() => onDelete(data.id_tipo)}>Desativar</Button>
+                            </Table.Cell>
+                        </Table.Row>
+                    ))}
                 </Table.Body>
             </Table>
         </div>
     )
-  }
+}
 
-export default Admin_Tproduct
+export default Admin_Tproduct;

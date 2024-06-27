@@ -5,7 +5,6 @@ import Localization from "./pages/localization.jsx"
 import Informations from './pages/informations.jsx'
 import Contact from './pages/contact.jsx'
 import Account_Login from './pages/account_login.jsx'
-import LoggedInUser from './pages/loggedin_user.jsx'
 import Shop from './pages/shop.jsx'
 import Admin_logged from './pages/admin.jsx'
 import AdminService from './components/AdminService.jsx'
@@ -39,7 +38,6 @@ const MyRoutes = () => {
                 <Route Component = { Informations } path="/informations" />
                 <Route Component = { Contact } path="/contacts" />
                 <Route Component = { Account_Login } path="/account_login" />
-                <Route Component = { LoggedInUser } path="/loggedin_account" />
                 <Route Component = { Shop } path="/shop" />
                 <Route Component = { Admin_logged } path="/admin/*">
                     <Route Component= { Admin_Brand } path="brand" />

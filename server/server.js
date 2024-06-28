@@ -158,8 +158,8 @@ app.get("/Marca", (req, res) => {
 
 
 
-app.put("/marca", (req, res) => {
-    let id = req.body.id_marca;
+app.put("/marca/:id", (req, res) => {
+    let id = req.params.id;
     let desc = req.body.desc_marca;
     let logo = req.body.logo_marca;
     let url = req.body.url_marca;
@@ -232,7 +232,7 @@ app.get("/tipoProduto", (req, resp) => {
     conexao.query(`SELECT id_tipo,
         desc_tipo,
         ativo
-    FROM TipoProduto WHERE ativo = 1`)
+    FROM TipoProduto`)
         .then(resut => resp.json(resut.recordset))
         .catch(err => resp.json(err));
 
@@ -275,14 +275,14 @@ app.post("/tipoProduto", (req, res) => {
 });
 
 
-app.put("/tipoProduto", (req, res) => {
+app.put("/tipoProduto/:id", (req, res) => {
 
-    let id = req.body.id;
+    let id = req.params.id;
     let desc_tipo = req.body.desc_tipo;
     let ativo = req.body.ativo;
 
     conexao.query(`exec SP_Upd_TipoProduto 
-        '${id}', '${desc_tipo}', '${ativo}' `, (erro, resultado) => {
+        ${id}, '${desc_tipo}', ${ativo} `, (erro, resultado) => {
         if (erro) {
             console.log(erro);
             res.status(500).send('Problema ao atualizar o Tipo de Produto');
@@ -335,18 +335,20 @@ app.post("/servicos", (req, res) => {
 });
 
 
-app.put('/servicos', (req, res) => {
+app.put('/servicos/:id', (req, res) => {
 
-    let id = req.body.id_servico;
+    let id = req.params.id;
     let tit = req.body.titulo;
     let desc = req.body.desc;
     let url = req.body.url;
     let img = req.body.img;
     let ordem = req.body.ordem;
     let ativo = req.body.ativo;
+    console.log(req.body);
+    console.log(id);
     conexao.query(`exec SP_Upd_Servico
-        '${id}', '${tit}', '${desc}', '${url}', 
-        '${img}', ${ordem}, ${ativo}`, (erro, resultado) => {
+        ${id}, '${tit}', '${desc}', '${img}', '${url}', 
+        ${ordem}, ${ativo}`, (erro, resultado) => {
         if (erro) {
             console.log(erro);
             res.status(500).send('Problema ao atualizar serviço');
@@ -461,24 +463,28 @@ app.post("/chamado", (req, res) => {
      });
  });
 
-/*app.get("/chamados", (req, resp) => {
+ app.get("/chamado", (req, resp) => {
 
-    conexao.query(`SELECT id_chamado,
-        id_cliente,
-        desc_chamado,
-        tipo_equipamento,
-        equipamento,
-        marca,
-        status_chamado,
-        dt_chamado
-    FROM Chamado`)
+    conexao.query(`SELECT  id_chamado,
+                    nome_cliente,
+                    fone_cliente,
+                    email_cliente,
+                    desc_tipo,
+                    desc_marca,
+                    desc_produto,
+                    nr_serie,
+                    capacidade,
+                    problema,
+                    solucao,
+                    dt_chamado
+                        FROM VW_CHAMADO`)
     .then(result => {
         resp.status(200).json(result.recordset);
     })
     .catch(err => {
         resp.status(500).json({ error: err.message });
     });
-});*/
+});
 
 
 

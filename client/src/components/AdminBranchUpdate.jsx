@@ -3,7 +3,7 @@ import { Button, Checkbox, Form } from 'semantic-ui-react';
 import API from '../api/api.js';
 import { useNavigate } from 'react-router-dom';
 
-export default function BrandUpdate() {
+export default function MarcaUpdate() {
     const navigate = useNavigate();
     const [id, setID] = useState(null);
     const [desc, setDesc] = useState('');
@@ -20,13 +20,19 @@ export default function BrandUpdate() {
     }, []);
 
     const updateAPIData = () => {
+        const atv = ativo ? 1 : 0;
+        console.log(desc+"|"+logo+"|"+url+"|"+atv)
+        console.log(logo)
         API.put(`marca/${id}`, {
             desc,
             logo,
             url,
-            ativo
+            ativo:atv
         }).then(() => {
-            navigate('/admin/branch');
+           //navigate('/admin/service');
+           alert('gravei alteração');
+        }).catch(error => {
+            console.error("Erro ao atualizar o marca:", error);
         });
     };
 
@@ -35,31 +41,31 @@ export default function BrandUpdate() {
             <Form className="create-form">
                 <Form.Field>
                     <label>Descrição</label>
-                    <input 
-                        placeholder='Descrição' 
+                    <input
+                        placeholder='Descrição'
                         value={desc}
                         onChange={(e) => setDesc(e.target.value)}
                     />
                 </Form.Field>
                 <Form.Field>
                     <label>Logo</label>
-                    <input 
-                        placeholder='URL da Imagem' 
+                    <input
+                        placeholder='URL da Logo'
                         value={logo}
                         onChange={(e) => setLogo(e.target.value)}
                     />
                 </Form.Field>
                 <Form.Field>
                     <label>Link</label>
-                    <input 
-                        placeholder='URL da página' 
+                    <input
+                        placeholder='URL da página'
                         value={url}
                         onChange={(e) => setURL(e.target.value)}
                     />
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox 
-                        label='Ativo' 
+                    <Checkbox
+                        label='Ativo'
                         checked={ativo}
                         onChange={() => setAtivo(!ativo)}
                     />

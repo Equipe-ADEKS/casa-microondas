@@ -19,16 +19,16 @@ function Admin_Menu () {
                         <p><FontAwesomeIcon icon="fa-solid fa-flag" />Marcas</p>
                     </Link>
                 </div>
-                <div>
+                {/*<div>
                     <Link to="/admin/order">
                     <p><FontAwesomeIcon icon="fa-solid fa-paper-plane" />Chamados</p>
                     </Link>
-                </div>
-                {/* <div>
+                </div>*/}
+                 <div>
                     <Link to="/admin/contact">
                         <p><FontAwesomeIcon icon="fa-solid fa-phone" />Contatos</p>
                     </Link>
-                </div>*/}
+                </div>
                 <div>
                     <Link to="/admin/tproduct">
                         <p><FontAwesomeIcon icon="fa-solid fa-toolbox" />Tipo Produtos</p>

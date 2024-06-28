@@ -24,15 +24,18 @@ export default function ServicoUpdate() {
     }, []);
 
     const updateAPIData = () => {
+        const atv = ativo ? 1 : 0;
+        console.log(`servicos/${id}`)
         API.put(`servicos/${id}`, {
-            tit,
+            titulo:tit,
             desc,
             img,
             url,
             ordem,
-            ativo
+            ativo:atv
         }).then(() => {
-            navigate('/admin/service');
+           //navigate('/admin/service');
+           alert('gravei alteração');
         }).catch(error => {
             console.error("Erro ao atualizar o serviço:", error);
         });

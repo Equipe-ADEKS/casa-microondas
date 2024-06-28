@@ -10,48 +10,60 @@ export default function TProductUpdate() {
     const [ativo, setAtivo] = useState(false);
 
     useEffect(() => {
-        setID(localStorage.getItem('ID'));
-        setDesc(localStorage.getItem('Desc'));
-        setAtivo(localStorage.getItem('Ativo') === 'true');
+        // Carregar dados do localStorage ao montar o componente
+        const storedId = localStorage.getItem('ID');
+        const storedDesc = localStorage.getItem('Desc');
+        const storedAtivo = localStorage.getItem('Ativo');
+
+        if (storedId && storedDesc && storedAtivo) {
+            setID(storedId);
+            setDesc(storedDesc);
+            setAtivo(storedAtivo === 'true'); // Converte para booleano
+        }
     }, []);
 
     const updateAPIData = () => {
-        API.put(`tipoProduto/${id}`, {id,
-            desc,
-            ativo
+        // Enviar dados atualizados para o backend
+        API.put(`/tipoProduto/${id}`, {
+            desc_tipo: desc,
+            ativo: ativo ? 1 : 0, // Converte booleano para 0 ou 1
         }).then(() => {
             navigate('/admin/tproduct');
+            alert('Tipo de produto atualizado com sucesso');
+        }).catch(error => {
+            console.error('Erro ao atualizar tipo de produto:', error);
+            alert('Erro ao atualizar tipo de produto. Verifique o console para mais detalhes.');
         });
     };
 
     return (
         <div>
             <Form className="create-form">
-            <Form.Field>
-                    <label>Id</label>
-                    <input 
-                        desabled
-                        placeholder='id' 
-                        value={id}
+                <Form.Field>
+                    <label>ID</label>
+                    <input
+                        disabled
+                        placeholder='ID'
+                        value={id || ''}
                         onChange={(e) => setID(e.target.value)}
                     />
                 </Form.Field>
                 <Form.Field>
                     <label>Descrição</label>
-                    <input 
-                        placeholder='Descrição' 
+                    <input
+                        placeholder='Descrição'
                         value={desc}
                         onChange={(e) => setDesc(e.target.value)}
                     />
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox 
-                        label='Ativo' 
+                    <Checkbox
+                        label='Ativo'
                         checked={ativo}
                         onChange={() => setAtivo(!ativo)}
                     />
                 </Form.Field>
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
+                <Button type='button' onClick={updateAPIData}>Update</Button>
             </Form>
         </div>
     );

@@ -8,17 +8,6 @@ import API from "../api/api.js"
 
 const Contact = () => {
 
-	// api.post('/chamado', {cliente, assunto, phone, message, tipoCham})
-	// 		.then( (resp) =>{
-	// 			console.log(resp);
-	// 			alert('OS dados foram enviados com sucesso');
-	// 		})
-	// 		.catch((err) => {
-	// 			console.error(err);
-	// 			alert('Erro ao enviar os dados de contato');
-	// 		})
-	// }
-
 	const [cliente, setCliente] = useState('')
 	const [email, setEmail] = useState('')
 	const [fone, setFone] = useState('')

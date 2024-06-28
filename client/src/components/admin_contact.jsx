@@ -1,57 +1,99 @@
+import React, { useEffect, useState } from 'react';
+import { Table, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import '../assets/css/admin_pages.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFlag, faScrewdriverWrench, faUser , faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import API from '../api/api.js';
 
-library.add( faUser, faFlag, faScrewdriverWrench , faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan)
+function ContactRead() {
+  const [APIData, setAPIData] = useState([]);
 
-function Admin_Contact () {
-    return (
-        <>
-        <main>
-            <section className='main_contact'>
-                <h2 className='tittle_contact'>Contatos</h2>
-                <div className='table'>
-                    <div className='input_form'>
-                        <span>id_contanto</span>
-                        <input type="text" />
-                    </div>
-                    <div className='input_form'>
-                        <span>id_cliente</span>
-                        <input type="text" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Assunto</span>
-                        <input type="text" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Mensagem</span>
-                        <input type="text" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Data contato</span>
-                        <input type="date" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Resposta</span>
-                        <input type="text" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Data resposta</span>
-                        <input type="date" />
-                    </div>
-                    <div className='input_form'>
-                        <span>Opções</span>
-                        <div className='options'>
-                            <button><FontAwesomeIcon icon="fa-solid fa-pencil" /></button>
-                            <button><FontAwesomeIcon icon="fa-solid fa-trash-can" /></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        </>
-    )
+  useEffect(() => {
+    fetchChamados();
+  }, []);
+
+  const fetchChamados = () => {
+    API.get(`/chamado`) // Ajuste para o endpoint correto do backend
+      .then((response) => {
+        setAPIData(response.data);
+      })
+      .catch(error => {
+        console.error("Erro ao buscar os chamados:", error);
+      });
+  };
+
+  const setData = (data) => {
+    // Ajuste de acordo com os campos do chamado no backend
+    let { id_chamado, nome_cliente, fone_cliente, email_cliente, desc_tipo, desc_marca, desc_produto, nr_serie, capacidade, problema, solucao, dt_chamado } = data;
+    localStorage.setItem('ID', id_chamado);
+    localStorage.setItem('NomeCliente', nome_cliente);
+    localStorage.setItem('FoneCliente', fone_cliente);
+    localStorage.setItem('EmailCliente', email_cliente);
+    localStorage.setItem('DescTipo', desc_tipo);
+    localStorage.setItem('DescMarca', desc_marca);
+    localStorage.setItem('DescProduto', desc_produto);
+    localStorage.setItem('NrSerie', nr_serie);
+    localStorage.setItem('Capacidade', capacidade);
+    localStorage.setItem('Problema', problema);
+    localStorage.setItem('Solucao', solucao);
+    localStorage.setItem('DtChamado', dt_chamado);
+  };
+
+  const onDelete = (id_chamado) => {
+    if (window.confirm('Tem certeza de excluir este chamado?')) {
+      API.delete(`/chamado/${id_chamado}`) // Ajuste para o endpoint correto de exclusão
+        .then(() => {
+          console.log(`Chamado com ID ${id_chamado} excluído com sucesso`);
+          fetchChamados(); // Atualiza a lista após exclusão
+        })
+        .catch(error => {
+          console.error(`Erro ao excluir o chamado com ID ${id_chamado}:`, error);
+        });
+    }
+  };
+
+  return (
+    <div>
+      <h1>Lista de Chamados</h1>
+      <Table singleLine>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>ID</Table.HeaderCell>
+            <Table.HeaderCell>Cliente</Table.HeaderCell>
+            <Table.HeaderCell>Telefone</Table.HeaderCell>
+            <Table.HeaderCell>Email</Table.HeaderCell>
+            <Table.HeaderCell>Tipo</Table.HeaderCell>
+            <Table.HeaderCell>Marca</Table.HeaderCell>
+            <Table.HeaderCell>Produto</Table.HeaderCell>
+            <Table.HeaderCell>Número de Série</Table.HeaderCell>
+            <Table.HeaderCell>Capacidade</Table.HeaderCell>
+            <Table.HeaderCell>Problema</Table.HeaderCell>
+            <Table.HeaderCell>Solução</Table.HeaderCell>
+            <Table.HeaderCell>Data do Chamado</Table.HeaderCell>
+            <Table.HeaderCell>Ações</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+
+        <Table.Body>
+          {APIData.map((chamado) => (
+            <Table.Row key={chamado.id_chamado}>
+              <Table.Cell>{chamado.id_chamado}</Table.Cell>
+              <Table.Cell>{chamado.nome_cliente}</Table.Cell>
+              <Table.Cell>{chamado.fone_cliente}</Table.Cell>
+              <Table.Cell>{chamado.email_cliente}</Table.Cell>
+              <Table.Cell>{chamado.desc_tipo}</Table.Cell>
+              <Table.Cell>{chamado.desc_marca}</Table.Cell>
+              <Table.Cell>{chamado.desc_produto}</Table.Cell>
+              <Table.Cell>{chamado.nr_serie}</Table.Cell>
+              <Table.Cell>{chamado.capacidade}</Table.Cell>
+              <Table.Cell>{chamado.problema}</Table.Cell>
+              <Table.Cell>{chamado.solucao}</Table.Cell>
+              <Table.Cell>{chamado.dt_chamado}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    </div>
+  );
 }
 
-export default Admin_Contact
+export default ContactRead;

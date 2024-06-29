@@ -25,7 +25,6 @@ function Header() {
 				</nav>
 				<div className="utilidades">
 					{/* <ThemeChangerButton /> */}
-					<AdminLoggedButton />
 					<AccountLoginButton />
 				</div>
 			</div>

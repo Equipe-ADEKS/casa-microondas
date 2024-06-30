@@ -26,6 +26,7 @@ function Header() {
 				<div className="utilidades">
 					{/* <ThemeChangerButton /> */}
 					<AccountLoginButton />
+					<Link to='/admin'>admin</Link>
 				</div>
 			</div>
 		</header>

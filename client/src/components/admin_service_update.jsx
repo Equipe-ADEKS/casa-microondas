@@ -25,19 +25,31 @@ export default function ServicoUpdate() {
 
     const updateAPIData = () => {
         const atv = ativo ? 1 : 0;
-        console.log(`servicos/${id}`)
-        API.put(`servicos/${id}`, {
-            titulo:tit,
+        console.log(`Enviando dados para servicos/${id}:`, {
+            titulo: tit,
             desc,
             img,
             url,
             ordem,
-            ativo:atv
+            ativo: atv
+        }); // Log para depuração
+
+        API.put(`servicos/${id}`, {
+            titulo: tit,
+            desc,
+            img,
+            url,
+            ordem,
+            ativo: atv
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
         }).then(() => {
-           //navigate('/admin/service');
-           alert('gravei alteração');
+            alert('Serviço atualizado com sucesso');
+            navigate('/admin/service');
         }).catch(error => {
-            console.error("Erro ao atualizar o serviço:", error);
+            console.error("Erro ao atualizar o serviço:", error.response ? error.response.data : error.message);
         });
     };
 

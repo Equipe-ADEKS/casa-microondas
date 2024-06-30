@@ -21,18 +21,27 @@ export default function MarcaUpdate() {
 
     const updateAPIData = () => {
         const atv = ativo ? 1 : 0;
-        console.log(desc+"|"+logo+"|"+url+"|"+atv)
-        console.log(logo)
+        console.log(`Enviando dados para marca/${id}:`, {
+            desc,
+            logo,
+            url,
+            ativo: atv
+        }); // Log para depuração
+
         API.put(`marca/${id}`, {
             desc,
             logo,
             url,
-            ativo:atv
+            ativo: atv
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
         }).then(() => {
-           //navigate('/admin/service');
-           alert('gravei alteração');
+            alert('Marca atualizada com sucesso');
+            navigate('/admin/brand');
         }).catch(error => {
-            console.error("Erro ao atualizar o marca:", error);
+            console.error("Erro ao atualizar a marca:", error.response ? error.response.data : error.message);
         });
     };
 

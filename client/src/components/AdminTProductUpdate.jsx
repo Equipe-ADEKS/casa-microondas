@@ -24,30 +24,25 @@ export default function TProductUpdate() {
 
     const updateAPIData = () => {
         // Enviar dados atualizados para o backend
-        API.put(`/tipoProduto/${id}`, {
+        const data = {
             desc_tipo: desc,
-            ativo: ativo ? 1 : 0, // Converte booleano para 0 ou 1
-        }).then(() => {
-            navigate('/admin/tproduct');
-            alert('Tipo de produto atualizado com sucesso');
-        }).catch(error => {
-            console.error('Erro ao atualizar tipo de produto:', error);
-            alert('Erro ao atualizar tipo de produto. Verifique o console para mais detalhes.');
-        });
+            ativo: ativo ? 1 : 0 // Converter booleano para 0 ou 1
+        };
+
+        API.put(`/tipoProduto/${id}`, data)
+            .then(() => {
+                navigate('/admin/tproduct');
+                alert('Tipo de produto atualizado com sucesso');
+            })
+            .catch(error => {
+                console.error('Erro ao atualizar tipo de produto:', error);
+                alert('Erro ao atualizar tipo de produto. Verifique o console para mais detalhes.');
+            });
     };
 
     return (
         <div>
             <Form className="create-form">
-                <Form.Field>
-                    <label>ID</label>
-                    <input
-                        disabled
-                        placeholder='ID'
-                        value={id || ''}
-                        onChange={(e) => setID(e.target.value)}
-                    />
-                </Form.Field>
                 <Form.Field>
                     <label>Descrição</label>
                     <input

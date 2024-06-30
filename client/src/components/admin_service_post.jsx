@@ -11,17 +11,25 @@ export default function Admin_Service_Post() {
     const [ativo, setAtivo] = useState(false);
 
     const postServico = () => {
-        API.post(`/servicos`, {
+        const payload = {
             tit,
             desc,
             url,
             img,
             ordem,
-            ativo
-        }).then(() => {
+            ativo: ativo ? 1 : 0
+        };
+        console.log('Enviando dados:', payload); // Log para depuração
+        API.post(`/servicos`, payload, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(() => {
             alert('Serviço gravado com sucesso');
-        }).catch((error) => {
-            console.error("Erro ao gravar o serviço:", error);
+        })
+        .catch((error) => {
+            console.error("Erro ao gravar o serviço:", error.response ? error.response.data : error.message);
         });
     };
 

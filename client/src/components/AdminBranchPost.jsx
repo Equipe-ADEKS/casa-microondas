@@ -8,14 +8,20 @@ export default function BrandPost() {
     const [url, setURL] = useState('');
 
     const postMarca = () => {
-        API.post('/marca', {
+        const payload = {
             desc,
             logo,
-            url,
+            url
+        };
+        console.log('Enviando dados:', payload); // Log para depuração
+        API.post('/marca', payload, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
         }).then(() => {
             alert('Marca gravada com sucesso');
         }).catch((error) => {
-            console.error('Erro ao gravar a marca:', error);
+            console.error('Erro ao gravar a marca:', error.response ? error.response.data : error.message);
         });
     };
 

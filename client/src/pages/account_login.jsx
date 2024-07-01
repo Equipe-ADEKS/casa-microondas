@@ -7,43 +7,36 @@ import { Link, redirect } from 'react-router-dom'
 
 const Account_Login = () => {
 
-    const [usu, setUsu] = useState('');
-    const [sen, setSen] = useState('');
+    const [usuario, setUsuario] = useState('');
+    const [senha, setSenha] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = () => {
 
-        // Enviar solicitação POST ao /login
-        API.post('/login', {
-            usu,
-            sen,
-        }).then((res) => {
-                if (res.data.autenticado) {
-                    // Se o login for bem-sucedido, redirecionar para a página admin
-                    return redirect("/admin")
-                } else {
-                    alert('Usuário inválido ou inexistente');
-                }
-            }).catch((error) => {
-                console.error(error);
-            });
+        const usuario = document.getElementById('user').value;
+        const senha = document.getElementById('password_user').value;
+
+        if (usuario == 'marcos' && senha == '123') {
+            window.location.href = '/admin';
+        } else {
+            alert('Usuário ou senha inválidos');
+        }
     };
 
     return (
         <>
             <Header />
             <main>
-                <h1 class="minha_conta">Minha Conta</h1>
+                <h1 className="minha_conta">Minha Conta</h1>
                 <section className='main_user'>
                     <section className='form_user'>
                         <h2>Conectar-se</h2>
-                        <fieldset class="formulario">
+                        <fieldset className="formulario">
                             <div>
-                                <input type="text" id='user' name='user' value={usu} onChange={(e) => setUsu(e.target.value)} />
-                                <label htmlFor="user">Nome de Usuário ou Endereço de Email  *</label>
+                                <input type="text" id='user' name='user' value={usuario} onChange={(e) => setUsuario(e.target.value)} />
+                                <label htmlFor="user">Nome de Usuário  *</label>
                             </div>
                             <div>
-                                <input type="password" id='password_user' name='password_user' value={sen} onChange={(e) => setSen(e.target.value)} />
+                                <input type="password" id='password_user' name='password_user' value={senha} onChange={(e) => setSenha(e.target.value)} />
                                 <label htmlFor="password_user">Senha  *</label>
                             </div>
                             <button type="submit" onClick={handleSubmit}>Conectar</button>

@@ -163,6 +163,7 @@ app.get("/Marca", (req, res) => {
 
 
 
+
 app.put('/marca/:id', (req, res) => {
     let id = req.params.id;
     let { desc, logo, url, ativo } = req.body;
@@ -386,19 +387,21 @@ app.get("/servico", (req, res) => {
 
 
 app.delete('/servicos/:id', (req, res) => {
-
     let id = req.params.id;
+
+    console.log(`Recebendo pedido de exclusão para o ID: ${id}`);
 
     conexao.query(`exec SP_Del_Servico '${id}'`, (erro, resultado) => {
         if (erro) {
-            console.log(erro);
+            console.error("Erro ao excluir o serviço:", erro);
             res.status(500).send('Problema ao excluir o serviço');
         } else {
-            console.log(resultado);
-            res.status(200).send('Servico excluido com sucesso');
+            console.log("Resultado da exclusão:", resultado);
+            res.status(200).send('Serviço excluído com sucesso');
         }
     });
 });
+
 
 app.delete('/tipoProduto/:id', (req, res) => {
 

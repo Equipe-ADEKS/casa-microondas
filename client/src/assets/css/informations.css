@@ -39,8 +39,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1400px;
+    min-width: 320px;
 }
 
 .logo_branca {
     width: 300px;
+}
+
+@media (max-width:1200px) {
+	.logo_agradecimento{
+        flex-direction: column;
+    }
 }

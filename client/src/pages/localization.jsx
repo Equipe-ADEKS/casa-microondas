@@ -37,7 +37,7 @@ const Localization = () =>
                         <p>Entrada com acessibilidade para cadeirantes </p>
                         <p>Pagamento via NFc e cartão de crédiro e débito</p>
                     </div>
-                    <a href="https://wa.me/5541987327813" className='btn_whats'> <FontAwesomeIcon icon="fa-brands fa-whatsapp" />Whatsapp</a>
+                    <a href="https://wa.me/5541985163600" className='btn_whats'> <FontAwesomeIcon icon="fa-brands fa-whatsapp" />Whatsapp</a>
                 </div>
             </div>
         </section>
@@ -58,7 +58,7 @@ const Localization = () =>
                         <p>Entrada com acessibilidade para cadeirantes </p>
                         <p>Pagamento via NFc e cartão de crédiro e débito</p>
                     </div>
-                    <a href="https://wa.me/5541987327813" className='btn_whats'> <FontAwesomeIcon icon="fa-brands fa-whatsapp" />Whatsapp</a>
+                    <a href="https://wa.me/5541985163602" className='btn_whats'> <FontAwesomeIcon icon="fa-brands fa-whatsapp" />Whatsapp</a>
                 </div>
             </div>
         </section>

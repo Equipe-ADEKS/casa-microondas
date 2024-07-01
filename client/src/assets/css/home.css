@@ -112,11 +112,17 @@ body{
 	margin: 50px auto;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	text-align: center;
+}
+
+.link_service{
+	text-decoration: none;
 }
 
 .services_desc{
 	display: flex;
 	flex-direction: column;
+	color: black;
 }
 
 .services_desc img{

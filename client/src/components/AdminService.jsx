@@ -4,7 +4,6 @@ import { Table, Button } from 'semantic-ui-react';
 import React, { useEffect, useState } from 'react';
 import API from '../api/api.js';
 import { Link } from 'react-router-dom';
-import Admin_Service_Post from './admin_service_post.jsx';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFlag, faScrewdriverWrench, faUser, faBuilding, faPaperPlane, faPhone, faToolbox, faRightFromBracket, faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +15,7 @@ function AdminService() {
     useEffect(() => {
         API.get(`/servico`)
             .then((response) => {
-                console.log(response.data);
+                console.log("Dados recebidos:", response.data);
                 setAPIData(response.data);
             })
             .catch(error => {
@@ -37,6 +36,7 @@ function AdminService() {
     const getData = () => {
         API.get(`/servico`)
             .then((response) => {
+                console.log("Dados atualizados:", response.data);
                 setAPIData(response.data);
             })
             .catch(error => {
@@ -48,9 +48,9 @@ function AdminService() {
         if (window.confirm('Tem certeza de excluir esse serviço do site?')) {
             console.log(`Deletando serviço com ID: ${id}`);
             API.delete(`/servico/${id}`)
-                .then(() => {
-                    console.log(`Serviço com ID: ${id} deletado com sucesso`);
-                    getData();
+                .then((response) => {
+                    console.log(`Serviço com ID: ${id} deletado com sucesso`, response);
+                    getData();  // Atualiza a lista após a exclusão
                 })
                 .catch(error => {
                     console.error("Houve um erro ao deletar o serviço!", error);
@@ -67,8 +67,8 @@ function AdminService() {
             </Link>
             <h1>Cadastro de Serviços</h1>
             <Table singleLine>
-                <Table.Header>
-                    <Table.Row>
+                <Table.Header className='header_table'>
+                    <Table.Row className='header_table_row'>
                         <Table.HeaderCell>Id</Table.HeaderCell>
                         <Table.HeaderCell>Título</Table.HeaderCell>
                         <Table.HeaderCell>Descrição</Table.HeaderCell>

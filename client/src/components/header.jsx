@@ -2,18 +2,17 @@ import { Link, Outlet } from "react-router-dom"
 import ThemeChangerButton from "./theme.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faMagnifyingGlass, faMoon, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faClipboard, faClock, faHome, faLocationDot, faMagnifyingGlass, faMoon, faShop, faShoppingCart, faSun, faUser } from "@fortawesome/free-solid-svg-icons"
 import AccountLoginButton from "./disconnect_user.jsx"
 import AdminLoggedButton from "./admin_logged.jsx"
 
-library.add(faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun, faBars)
+library.add(faUser, faShoppingCart, faMagnifyingGlass, faMoon, faSun, faClock, faHome ,faShop, faLocationDot, faClipboard)
 
 function Header() {
 	return (
 		<header>
 			<div className="inicio">
 				<div className="inicio_barra">
-					<FontAwesomeIcon className="fa_bars" icon="fa-solid fa-bars" />
 					<Link to="/"><h1 className="nome"><strong>Casa do Microondas</strong></h1></Link>
 				</div>
 				<nav className="navegacao">
@@ -28,6 +27,25 @@ function Header() {
 					<AccountLoginButton />
 					<Link to='/admin'>admin</Link>
 				</div>
+			</div>
+			<div className="nave_mobile">
+				<nav>
+					<Link to="/" className="icon_mobile">
+						<FontAwesomeIcon icon="fa-solid fa-house" />
+					</Link>
+					<Link to="/shop" className="icon_mobile">
+						<FontAwesomeIcon icon="fa-solid fa-shop" />
+					</Link>
+					<Link to="/localization" className="icon_mobile">
+						<FontAwesomeIcon icon="fa-solid fa-location-dot" />
+					</Link>
+					<Link to="/informations" className="icon_mobile">
+						<FontAwesomeIcon icon="fa-solid fa-clock" />
+					</Link>
+					<Link to="/contacts" className="icon_mobile">
+						<FontAwesomeIcon icon="fa-solid fa-clipboard" />
+					</Link>
+				</nav>
 			</div>
 		</header>
 	)

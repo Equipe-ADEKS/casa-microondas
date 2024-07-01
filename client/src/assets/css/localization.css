@@ -36,6 +36,8 @@
     text-align: left;
     margin-left: 10%;
     max-width:1200px;
+    display: flex;
+    align-items: center;
 }
 
 .map_content {
@@ -98,5 +100,7 @@
     }.maps_info{
         align-items: center;
         margin: auto;
+    }.map{
+        flex-direction: column;
     }
 }

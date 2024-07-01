@@ -2,6 +2,7 @@ import '../assets/css/home.css'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
 import Gallery from '../components/carousel.jsx'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -15,18 +16,24 @@ const Home = () => {
 		<Gallery />
 		
 		<section className="services">
-			<div className='services_desc'>
-				<img src="./conserto-microondas.jpg" alt="" />
-				<p>Conserto microondas</p>
-			</div>
-			<div className='services_desc'> 
-				<img src="./conserto-forno-eletrico.jpg" alt="" />
-				<p>Conserto Forno Elétrico</p>
-			</div>
-			<div className='services_desc'>
+			<Link className='link_service' to="/contacts">
+				<div className='services_desc'>
+					<img src="./conserto-microondas.jpg" alt="" />
+					<p>Conserto microondas</p>
+				</div>
+			</Link>
+			<Link className='link_service' to="/contacts">
+				<div className='services_desc'> 
+					<img src="./conserto-forno-eletrico.jpg" alt="" />
+					<p>Conserto Forno Elétrico</p>
+				</div>
+			</Link>
+			<Link className='link_service' to="/contacts">
+				<div className='services_desc'>
 				<img src="./refora-microondas.jpg" alt="" />
 				<p>Reforma Microondas</p>
 			</div>
+			</Link>
 		</section>
 		<section className="author_section">
 			<div className="author">
@@ -41,18 +48,24 @@ const Home = () => {
 			</div>
 		</section>
 		<section className="services">
-			<div className='services_desc'>
-				<img src="./busca-e-entrega.jpg" alt="" />
-				<p>Busca e entrega</p>
-			</div>
-			<div className='services_desc'> 
-				<img src="./venda-microondas.jpg" alt="" />
-				<p>Venda microondas</p>
-			</div>
-			<div className='services_desc'>
-				<img src="./acessorio.jpg" alt="" />
-				<p>Acessório</p>
-			</div>
+			<Link className='link_service' to="/localization">
+				<div className='services_desc'>
+					<img src="./busca-e-entrega.jpg" alt="" />
+					<p>Busca e entrega</p>
+				</div>
+			</Link>
+			<Link className='link_service' to="/shop">
+				<div className='services_desc'> 
+					<img src="./venda-microondas.jpg" alt="" />
+					<p>Venda microondas</p>
+				</div>
+			</Link>
+			<Link className='link_service' to="/shop">
+				<div className='services_desc'>
+					<img src="./acessorio.jpg" alt="" />
+					<p>Acessório</p>
+				</div>
+			</Link>
 		</section>
 	</main>
     <Footer />

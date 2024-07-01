@@ -10,12 +10,12 @@ function Admin_Menu () {
     return (
         <div className='menu_bar'>
                 <div>
-                    <Link to="/admin/service">
+                    <Link className='menu_bar_link' to="/admin/service">
                         <p><FontAwesomeIcon icon="fa-solid fa-screwdriver-wrench" />Serviços</p>
                     </Link>
                 </div>
                 <div>
-                    <Link to="/admin/brand">
+                    <Link className='menu_bar_link' to="/admin/brand">
                         <p><FontAwesomeIcon icon="fa-solid fa-flag" />Marcas</p>
                     </Link>
                 </div>
@@ -25,17 +25,17 @@ function Admin_Menu () {
                     </Link>
                 </div>*/}
                  <div>
-                    <Link to="/admin/contact">
+                    <Link className='menu_bar_link' to="/admin/contact">
                         <p><FontAwesomeIcon icon="fa-solid fa-phone" />Contatos</p>
                     </Link>
                 </div>
-                <div>
-                    <Link to="/admin/tproduct">
+                <div >
+                    <Link className='menu_bar_link' to="/admin/tproduct">
                         <p><FontAwesomeIcon icon="fa-solid fa-toolbox" />Tipo Produtos</p>
                     </Link>
                 </div>
                 <div>
-                    <Link to="/"><p>
+                    <Link className='menu_bar_link' to="/"><p>
                         <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />Sair</p>
                     </Link>
                 </div>

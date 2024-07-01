@@ -34,14 +34,12 @@ function Admin_Brand() {
   
     const onDelete = (id) => {
         if (window.confirm('Tem certeza de excluir essa marca do site?')) {
-            console.log(`Deletando marca com ID: ${id}`);
             API.delete(`/marca/${id}`)
                 .then(() => {
-                    console.log(`Marca com ID: ${id} deletado com sucesso`);
                     getData();
                 })
                 .catch(error => {
-                    console.error("Ocorreu um erro ao excluir a marca", error);
+                    alert("Ocorreu um erro ao excluir a marca", error);
                 });
             }
         };

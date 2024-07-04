@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.carouselImages {
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+
+}
+
+.slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

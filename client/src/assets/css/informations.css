@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.title {
+    font-family: "Alfa Slab One", serif;
+    font-size: 70px;
+    margin-left: 10%;
+    color: var(--cor-texto-light);
+    text-transform: uppercase;
+    max-width: 1400px;
+    min-width: 320px;
+    margin-right: 10%;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-left: 130px;
+    margin-bottom: 30px;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 50px 0;
+}
+
+.banner_content {
+    border-radius: 10px;
+}
+
+.text_info {
+    padding: 100px;
+}
+
+.logo_agradecimento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    min-width: 320px;
+}
+
+.logo_branca {
+    width: 300px;
+}
+
+@media (max-width:1200px) {
+	.logo_agradecimento{
+        flex-direction: column;
+    }
+}
